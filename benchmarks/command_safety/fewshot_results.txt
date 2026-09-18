@@ -1,0 +1,18 @@
+=== Overall (malicious vs benign) ===
+baseline : AUC=0.7880  best-F1 t=0.46 prec=0.624 rec=0.872 f1=0.727 acc=0.673
+few-shot : AUC=0.7377  best-F1 t=0.53 prec=0.589 rec=0.860 f1=0.699 acc=0.630
+
+=== 'find'-prefixed benign commands (n=342) ===
+baseline : mean p_malicious=0.544  flagged>=0.5=0.588
+few-shot : mean p_malicious=0.546  flagged>=0.5=0.673
+
+=== Short/bare malicious commands (<=2 words, n=116) ===
+baseline : mean p_malicious=0.612  caught>=0.5=0.664
+few-shot : mean p_malicious=0.640  caught>=0.5=0.974
+
+=== Net effect at fixed threshold 0.5 ===
+fixed by few-shot: 158   broken by few-shot: 245   net: -87
+
+=== Gray zone (risky-but-legitimate, n=37) ===
+baseline : mean p_malicious=0.380
+few-shot : mean p_malicious=0.542
