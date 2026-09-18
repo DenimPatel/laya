@@ -25,6 +25,10 @@ dataset + evaluation scripts under `benchmarks/`.
 - `predictions.jsonl` — laya's raw outputs for the run described below. Committed for
   reproducibility of the results below without re-running inference.
 - `results.txt` — full `score.py` output for that run.
+- `analyze_failures.py` — breaks down recurring themes in the false positives/negatives.
+- `run_benchmark_fewshot.py` — few-shot variant of the benchmark (see below).
+- `predictions_fewshot.jsonl` — laya's outputs with few-shot exemplars prepended.
+- `compare_fewshot.py` / `fewshot_results.txt` — baseline-vs-few-shot comparison.
 
 ## Dataset composition (1237 commands)
 
@@ -81,10 +85,63 @@ context. This matches the design assumption from the original proposal that
 history/context features (not just raw command text) are required before any
 auto-allow decision could be trusted.
 
-## Next experiment (in progress)
+## Failure-theme analysis (`analyze_failures.py`)
 
-Collecting recurring failure themes from `results.txt` (bare GTFOBins invocations
-lacking privilege context; pipe/exec-shaped benign commands scoring as risky) and
-testing whether a handful of in-context few-shot examples — packed into laya's
-`state` field, since the model has no dedicated few-shot API — shift these specific
-failure clusters without regressing the rest of the set.
+Two recurring, dataset-scale themes emerged from the baseline run's errors (n=92
+false negatives, n=299 false positives out of 1200 malicious+benign commands):
+
+- **False positives are dominated by `find`**: 201 of 299 FPs (67%) start with
+  `find`. `find`-prefixed benign commands score mean p_malicious=0.544 (flagged
+  59% of the time) vs. 0.443 for all other benign commands — `find`'s common
+  pairing with `-exec`/pipes in both the benign (nl2bash) and attack (GTFOBins)
+  corpora appears to be the single largest source of miscalibration.
+- **False negatives cluster on short/bare invocations**: 42% of FNs are ≤2 words
+  (`systemctl`, `irb`, `nc`-style GTFOBins entries with no arguments) — these need
+  privilege/session context that command-text-only state doesn't carry.
+
+## Experiment: few-shot exemplars packed into `state`
+
+laya has no dedicated few-shot/in-context API (confirmed by reading
+`laya/agent.py`/`common.py` — `state` is just serialized to text and concatenated
+after the question+options block, truncated to the model's token budget). To test
+whether in-context exemplars help anyway, `run_benchmark_fewshot.py` prepends 6
+hand-written, leakage-checked reference examples (3 benign incl. `find`-based
+cleanup commands, 3 malicious incl. a bare-invocation privilege-escalation example
+and a netcat reverse shell) to every command's state, then re-runs the full 1237-row
+benchmark for comparison.
+
+**Result: net negative.** See `fewshot_results.txt` for full numbers.
+
+| metric | baseline | few-shot |
+|---|---|---|
+| AUC-ROC | 0.788 | 0.738 |
+| best-F1 | 0.727 | 0.699 |
+| `find`-benign flagged rate | 58.8% | 67.3% (worse) |
+| short/bare malicious caught rate | 66.4% | **97.4%** (much better) |
+| gray-zone mean p_malicious | 0.380 | 0.542 (worse — more false alarms) |
+| net flips at threshold 0.5 | — | **+158 fixed, −245 broken → net −87** |
+
+The few-shot exemplars strongly fixed their *targeted* theme (bare/short malicious
+commands, 66%→97% caught) but the net effect across the whole set was negative:
+overall AUC dropped and the `find`-benign problem got *worse*, not better, along
+with the gray zone getting more false alarms. The likely mechanism: this is a small
+non-autoregressive encoder that pools the whole sequence through a `[CLS]` token
+rather than doing LLM-style analogical in-context reasoning — stuffing a static
+block of mostly-malicious-labeled exemplars into every single query appears to shift
+the model's overall risk baseline upward (an anchoring effect) rather than teaching
+it to discriminate near the specific failure cases. Since the same 6 exemplars were
+prepended unconditionally to all 1237 queries regardless of relevance, this global
+bias plausibly swamped the local, targeted improvement.
+
+## Next experiment
+
+Two directions worth trying before concluding few-shot doesn't work at all:
+1. **Per-query dynamic retrieval** — only inject exemplars similar to the target
+   command (e.g. nearest-neighbor by embedding or shared first-token/binary) instead
+   of the same static block for every query, so irrelevant exemplars don't bias
+   unrelated commands.
+2. **Wording/length-matched exemplars** — the malicious exemplars used longer,
+   more evocative descriptions ("classic GTFOBins-style privilege escalation",
+   "reverse shell to an external host") than the terse benign ones; re-test with
+   length- and tone-matched labels to isolate whether the shift is semantic or a
+   surface artifact of how the exemplars were written.
