@@ -1,2 +1,4 @@
 sources/
 gtfobins_pages/
+*.log
+predictions_fewshot.jsonl
